@@ -39,8 +39,9 @@ public class Ej03 {
                           
                           
                           
-                          """.formatted(suma,resta,multiplicacion,division);
+                          """.formatted(suma,resta,multiplicacion,division,suma2,resta2,multiplicacion2,division2);
         
+        System.out.println(resultados);
     }
     
 }
