@@ -32,7 +32,8 @@ public class Ej11 {
         System.out.println("Ahora introduzca el valor de la hipotenusa");
         hipotenusaTriangulo= entrada.nextDouble();
         
-        System.out.println("En este caso segun la figura el cateto opuesto es igual al radio de la semicircunferencia, por lo tanto tienen el mismo valor ");
+        System.out.println("En este caso segun la figura el cateto opuesto es igual al"
+                + " radio de la semicircunferencia, por lo tanto tienen el mismo valor ");
         
         catetoOpuesto=radioSemicircunferencia;
         
@@ -40,9 +41,10 @@ public class Ej11 {
         
         catetoContiguo=Math.sqrt(Math.pow(hipotenusaTriangulo, 2)-Math.pow(catetoOpuesto, 2));
         
-        System.out.println("Ya con esto podemos calcular el area de las figuras por separado para luego sumarlas y obtener el area final");
+        System.out.println("Ya con esto podemos calcular el area de las figuras por separado para luego sumarlas"
+                + " y obtener el area final");
         
-        areaTriangulo=(2*radioSemicircunferencia*catetoContiguo)/2;
+        areaTriangulo=(radioSemicircunferencia*catetoContiguo);
         
         System.out.println("Area del triangulo: "+areaTriangulo+" u²");
         
