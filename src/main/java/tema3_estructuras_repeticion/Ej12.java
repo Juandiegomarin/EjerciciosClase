@@ -9,10 +9,10 @@ public class Ej12 {
         
         
         char caracter=97;
-        int codigo=caracter;
+        
         
         for (int i = 0; i <= 25; i++) {
-            
+            int codigo=caracter;
             System.out.print("("+caracter+"-"+codigo+")");
             System.out.print("-");
             caracter++;

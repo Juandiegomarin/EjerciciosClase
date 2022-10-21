@@ -8,10 +8,10 @@ public class Ej13 {
     public static void main(String[] args) {
         
         char caracter=65;
-        int codigo=caracter;
+        
         
         do {      
-            
+            int codigo=caracter;
             System.out.print("("+caracter+"-"+codigo+")");
             System.out.print("-");
             caracter++;
