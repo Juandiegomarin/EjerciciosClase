@@ -15,7 +15,7 @@ public class EjemploSwitchRandom {
         System.out.println("Introduce una letra->(A,B,C,D,E)");
         letra = entrada.nextLine();
 
-        letra.toLowerCase();
+        letra=letra.toLowerCase();
         
         
        

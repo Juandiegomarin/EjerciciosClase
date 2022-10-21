@@ -8,13 +8,14 @@ public class Ej12 {
     public static void main(String[] args) {
         
         
-        int codNumerico=97;
+        char caracter=97;
+        int codigo=caracter;
         
         for (int i = 0; i <= 25; i++) {
             
-            System.out.print(codNumerico);
+            System.out.print("("+caracter+"-"+codigo+")");
             System.out.print("-");
-            codNumerico++;
+            caracter++;
         }
         
         

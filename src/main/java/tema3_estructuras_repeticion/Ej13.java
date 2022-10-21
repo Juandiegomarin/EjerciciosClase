@@ -7,17 +7,18 @@ public class Ej13 {
     
     public static void main(String[] args) {
         
-        
-        int codNumerico=65;
+        char caracter=65;
+        int codigo=caracter;
         
         do {      
             
-            System.out.print(codNumerico);
+            System.out.print("("+caracter+"-"+codigo+")");
             System.out.print("-");
-            codNumerico++;
+            caracter++;
             
             
-        } while (codNumerico<91);
+        } while (caracter<91);
+        
     }
     
 }
