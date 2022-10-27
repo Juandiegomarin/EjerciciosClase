@@ -1,8 +1,8 @@
-package dulces;
+package estepona_turronera;
 
 import javax.swing.JOptionPane;
 
-public class CosteProduccion {
+public class FabricaDeDulces {
 
     public static void main(String[] args) {
 
