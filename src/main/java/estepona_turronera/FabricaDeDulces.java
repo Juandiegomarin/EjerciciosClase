@@ -29,7 +29,7 @@ public class FabricaDeDulces {
                     
         M1 (Mantecado de Limón)
         M2 (Mazapanes)
-        T1 (Turrón de hocolate)
+        T1 (Turrón de chocolate)
         T2 (Turrón clásico)
         P1 (Polvorones)
         """;

@@ -7,8 +7,6 @@ public class FabricaDeDulces2 {
 
     public static void main(String[] args) {
 
-        Scanner entrada = new Scanner(System.in);
-        
         //Todas las variables necesarias para el programa
         String opcion;
         String codigo = "";
@@ -32,7 +30,7 @@ public class FabricaDeDulces2 {
         double costeVentaUnitaria;
 
         String menu = """
-                       Menu de opciones
+                       Menù de opciones
                         ----------------
                         Calcular viabilidad de productos
                         Terminar
@@ -56,13 +54,18 @@ public class FabricaDeDulces2 {
                     
                     
                     JOptionPane.showMessageDialog(null,
-                            "Ahora introduce el codigo del dulce deseado");
+                            "Ahora introduce el código del dulce deseado");
                     //Pedimos datos por pantalla y lo introducimos
                     
                     //bucle interno que se repite si la intruduccion del codigo es errónea
                     do {
                       codigo =  JOptionPane.showInputDialog(null,
-                                "Los códigos disponibles son M1,M2,T1,T2,P1. "
+                                "Los códigos disponibles son:\n\n"
+                                        + " M1(Mantecado de Limón)\n"
+                                        + " M2(Mazapanes)\n"
+                                        + " T1(Turrón de chocolate)\n"
+                                        + " T2(Turrón clásico)\n"
+                                        + " P1(Polvorones)\n \n"
                                 + "Para terminar el programa escriba salir");
 
                         //switch intermedio que tambien tiene dos opciones o codigo o salir
@@ -71,7 +74,7 @@ public class FabricaDeDulces2 {
                             case "M1","M2","T1","T2","P1":
                                 //Primer caso segundo switch
                                 JOptionPane.showMessageDialog(null,
-                                        "El codigo es: " + codigo);
+                                        "El codigo es elegido para los cálculos es: " + codigo);
                                 
                                 //bucle que repite la pedida de datos si no se encuentra entre los
                                 // rangos limitados
@@ -116,7 +119,7 @@ public class FabricaDeDulces2 {
                                 costeProduccion = precioManoObra + precioMateriaPrima;
 
                                 JOptionPane.showMessageDialog(null,
-                                        "El coste de produccion del codigo " + codigo+" es: "
+                                        "El coste de produccion del código " + codigo+" es: "
                                         + String.format("%.2f", costeProduccion) + "€");
                                         //String format para delimitar los decimales a 2
                                 
@@ -137,7 +140,7 @@ public class FabricaDeDulces2 {
                                 }
                                 
                                 JOptionPane.showMessageDialog(null,
-                                        "El coste de venta unitaria del codigo " + codigo+" es: "
+                                        "El coste de venta unitaria del código " + codigo+" es: "
                                         + String.format("%.2f",costeVentaUnitaria ) + "€");
                                 
                                 //Inicializacion de variable que nos va a servir para calcular las
@@ -146,8 +149,8 @@ public class FabricaDeDulces2 {
                                         (costeVentaUnitaria-costeProduccion));
                                 
                                 JOptionPane.showMessageDialog(null, 
-                                        "El numero de unidades para el beneficio son:"
-                                                + " "+(int)unidadesParaObtenerBeneficio+ " unidades");
+                                        "El numero de unidades para el beneficio son: "
+                                                +(int)unidadesParaObtenerBeneficio+ " unidades");
                                 break;
                             case "salir":
                                 //Segundo caso segundo switch
@@ -158,15 +161,15 @@ public class FabricaDeDulces2 {
                                 break;
                             default:
                                 JOptionPane.showMessageDialog(null,
-                                        "Codigo inexsistente, repita");
+                                        "Código inexsistente, introduzca un códgo válido");
 
                         }
 
-                    } while (!codigo.equals("salir") && !(codigo.equals("M1")
+                    } while (!codigo.equals("salir") && !((codigo.equals("M1")
                             || codigo.equals("M2")
                             || codigo.equals("T1")
                             || codigo.equals("T2")
-                            || codigo.equals("P1")));
+                            || codigo.equals("P1"))));
 
                     break;
 
