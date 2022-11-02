@@ -71,7 +71,7 @@ public class FabricaDeDulces3 {
     private static String filtrarCodigo(){
     
         String codigo="";
-        int numero;
+        
         do {       
            
             
