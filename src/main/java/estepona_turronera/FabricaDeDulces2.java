@@ -30,7 +30,7 @@ public class FabricaDeDulces2 {
         double costeVentaUnitaria;
 
         String menu = """
-                       Menù de opciones
+                       Menú de opciones
                         ----------------
                         Calcular viabilidad de productos
                         Terminar
