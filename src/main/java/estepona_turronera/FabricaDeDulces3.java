@@ -28,7 +28,9 @@ public class FabricaDeDulces3 {
         do {
 
             opcion = mostrarMenuPedirOpcion();
+            if(opcion==null){System.exit(0);}
             opcion = opcion.toLowerCase();
+             
 
             switch (opcion) {
                 case "calcular":
@@ -81,7 +83,8 @@ public class FabricaDeDulces3 {
                         ----------------
                        """;
 
-        return JOptionPane.showInputDialog(null, menu + "\nIntroduce una opcion");
+        return JOptionPane.showInputDialog(null, menu + "\nIntroduce una opcion\n"
+                + "Calcular para seguir, salir o cancelar para terminar");
 
     }
 
@@ -94,7 +97,7 @@ public class FabricaDeDulces3 {
                 + " T1(Turrón de chocolate)\n"
                 + " T2(Turrón clásico)\n"
                 + " P1(Polvorones)\n \n"
-                + "Para terminar el programa escriba salir"
+                + "Para terminar el programa escriba salir o pulse cancelar"
         );
 
     }
@@ -106,7 +109,7 @@ public class FabricaDeDulces3 {
         do {
 
             codigo = leerCodigoDulce();
-
+            if(codigo==null){System.exit(0);}
             if ((!codigo.equals("salir") && !(codigo.equals("M1")
                     || codigo.equals("M2")
                     || codigo.equals("T1")
@@ -115,9 +118,7 @@ public class FabricaDeDulces3 {
                 JOptionPane.showMessageDialog(null, "Codigo Icorrecto");
             }
 
-            if (codigo.isEmpty()) {
-                codigo = "salir";
-            }
+            
 
         } while (!codigo.equals("salir") && !((codigo.equals("M1")
                 || codigo.equals("M2")
