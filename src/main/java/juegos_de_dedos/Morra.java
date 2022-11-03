@@ -97,10 +97,8 @@ public class Morra {
                 }
             } while (prediccionJugador < 2 || prediccionJugador > 10);
 
-            if (numeroJugador == 0) {
-                numeroJugador = 1;
-            }
             
+            //Generamos la preddicción de la maquina entre 2 y 10
             prediccionMaquina = rd.nextInt(11)+2;
             
             //Total de (dedos sacados)
