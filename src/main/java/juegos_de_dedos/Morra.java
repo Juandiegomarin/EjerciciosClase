@@ -17,6 +17,9 @@ public class Morra {
         int prediccionMaquina;
         int prediccionJugador = 0;
         int suma;
+        int victoriasMaquina=0;
+        int victoriasUsuario=0;
+        int contador=0;
 
         System.out.println("Bienvenido al juego de la morra");
         System.out.println("Ambos jugadores sacareis un numero de 0 a 5"
@@ -99,7 +102,7 @@ public class Morra {
 
             
             //Generamos la preddicción de la maquina entre 2 y 10
-            prediccionMaquina = rd.nextInt(11)+2;
+            prediccionMaquina = rd.nextInt(9)+2;
             
             //Total de (dedos sacados)
             suma = numeroJugador + numeroMaquina;
@@ -121,14 +124,20 @@ public class Morra {
             //Condiciones para ver si alguien ha ganado o tadavia se sigue jugando
             if (prediccionJugador == suma) {
                 System.out.println("Has ganado");
+                victoriasUsuario++;
             }
             if (prediccionMaquina == suma) {
                 System.out.println("Ha ganado la maquina");
+                victoriasMaquina++;
             }
             if (prediccionJugador != suma && prediccionMaquina != suma) {
                 System.out.println("Nadie ha ganado se repite la ronda");
             }
-
-        } while (prediccionJugador != suma && prediccionMaquina != suma);
+            
+            System.out.println("Llevas "+victoriasUsuario+" victorias");
+            System.out.println("La maquina lleva "+victoriasMaquina+" victorias");
+            contador++;
+        } while ((victoriasUsuario>5&&victoriasUsuario-victoriasMaquina>=2)||
+                (victoriasMaquina>5&&victoriasMaquina-victoriasUsuario>=2)||contador<21);
     }
 }
