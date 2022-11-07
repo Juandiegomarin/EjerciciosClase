@@ -8,11 +8,14 @@ public class MorrasMetodizado {
     
     
     //Método main del programa
+    
     public static void main(String[] args) {
 
         eleccionOpcion();
 
     }
+    
+    
     
     
     //Método que muestra el menú de opciones y te pide la opción a elegir
@@ -22,9 +25,11 @@ public class MorrasMetodizado {
         
         //Variable donde se almacena el dato introducido por el usuario que 
         //será recogida por otra variable en el método filtrarOpcion
+        
         int opcion;
         
         //Variable para almacenar el menú de opciones y mostrarla por pantalla
+        
         String menu = """
                 
                 Bienvenido al juego de la morra
@@ -39,11 +44,18 @@ public class MorrasMetodizado {
         
         //Igualamos la variable a lo que introduzca el usuario
         //Hacemos una conversión explícita para pasar de String a int 
+        
         opcion = Integer.parseInt(JOptionPane.showInputDialog(null, menu));
         
         //Devolvemos el valor de la variable
+        
         return opcion;
     }
+    
+    
+    
+    
+    
     
     //Método que llama el metodo mostrarMenuLeerOpcion internamente, recoge
     //el valor que devuleve ese metodo y controla que no sea ningún valor
@@ -54,28 +66,38 @@ public class MorrasMetodizado {
         
         //Variable que recibirá y almacenará el valor que devuelve el método
         //mostrarMenuLeerOpcion
+        
         int opcion = 0;
         
         //Variable booleana necesaria para la lógica del bucle
+        
         boolean seguir = true;
         
         
         //Bucle do while que se repite y vuelve a llamar el método 
         //mostrarMenuLeerOpcion hasta que se introduzca un valor correcto
+        
+        
         do {
             
             //Try catch para controlar las excepciones 
+            
             try {
+                
                 //Igualamos la variable opcion al metodo para recoger su valor
+                
                 opcion = mostrarMenuLeerOpcion();
+                
                 
                 //Si todo es correcto ponemos la variable booleana a false
                 //para salir del bucle
+                
                 seguir = false;
                 
             } catch (NumberFormatException nfe) {
                 
                 //Mensaje en caso de introducir valores incorrectos
+                
                 JOptionPane.showMessageDialog(null,
                         "Has introducido un valor no numérico, repita ");
 
@@ -84,9 +106,16 @@ public class MorrasMetodizado {
         } while (seguir);
         
         //Devolvemos el valor de opcion ya filtrado
+        
         return opcion;
 
     }
+    
+    
+    
+    
+    
+    
     
     
     //Este método es el esqueleto del programa donde recoge la opción ya 
@@ -114,6 +143,7 @@ public class MorrasMetodizado {
             
             //Igualamos la variable opcion al valor que devuelve el método
             //filtrarOpcion
+            
             opcion = filtrarOpcion();
 
             switch (opcion) {
@@ -121,6 +151,7 @@ public class MorrasMetodizado {
                     
                     //Opcion 1 llamamos al método que contiene el juego del 
                     //programa
+                    
                     partidaSimple();
                     
                     break;
@@ -148,6 +179,11 @@ public class MorrasMetodizado {
     }
     
     
+    
+    
+    
+    
+    
     //Este método contiene la lógica de nuestro programa, donde se usan
     //las variables necesarias 
     
@@ -160,9 +196,11 @@ public class MorrasMetodizado {
         Random rd = new Random();
         
         //Variable booleana que se usa para la lógica del bucle
+        
         boolean seguir;
         
         //Variables necesarias para la ejecución del programa
+        
         int numeroMaquina;
         int numeroJugador = 0;
         int prediccionMaquina;
@@ -184,7 +222,9 @@ public class MorrasMetodizado {
         
         //Inicializamos la variable con el valor que devuelve el método 
         //filtrarPuntos
+        
         puntos = filtrarPuntos();
+        
         
         
         //Bucle principal del programa que se termina cuando uno de los dos gana
@@ -192,13 +232,16 @@ public class MorrasMetodizado {
             
             //Inicializamos esta variable con un número aleatorio entre 0 y 5
             //numero de dedos disponibles a sacar en una mano
+            
             numeroMaquina = rd.nextInt(6);
             
             
             //Condición reglas, si se saca el puño cerrado, equivale a 1 dedo
+            
             if (numeroMaquina == 0) {
                 numeroMaquina = 1;
             }
+            
             //Inicializamos la variable con el valor que devuelve el método
             //filtrarNumeroParaSacar
             
@@ -220,10 +263,12 @@ public class MorrasMetodizado {
             
             //Incializamos esta variable con la suma del número de dedos que ha
             //sacado cada jugador
+            
             suma = numeroJugador + numeroMaquina;
             
             //Inicializamos la variable resultado con el valor que devuelve
             //el método comprobarGanadorRonda
+            
             resultado = comprobarGanadorRonda(
                     numeroJugador, numeroMaquina,
                     prediccionJugador, prediccionMaquina, suma);
@@ -234,6 +279,7 @@ public class MorrasMetodizado {
             if (resultado == "Empate, siguiente ronda") {
                 
                 //Si han empatado se le suma una victoria a cada jugador
+                
                 victoriasUsuario++;
                 victoriasMaquina++;
                 
@@ -244,6 +290,7 @@ public class MorrasMetodizado {
             } else if (resultado == "Has ganado") {
                 
                 //Si ha ganado el usuario se le suma una victoria
+                
                 JOptionPane.showMessageDialog(null,
                         "Has ganado la ronda");
                 
@@ -268,6 +315,7 @@ public class MorrasMetodizado {
             
             //Inicializamos la variable que muestra el número de victorias de
             //cada uno y el número de ronda correspondiente
+            
             String resultados = """
                            
                            Jugador = %d
@@ -315,11 +363,17 @@ public class MorrasMetodizado {
             
             
             //Condicion que marca el fin del bucle cuando alguno de los dos gana
+            
         } while (!(victoriasUsuario >= puntos
                 && victoriasUsuario - victoriasMaquina >= 2)
                 && !(victoriasMaquina >= puntos
                 && victoriasMaquina - victoriasUsuario >= 2));
     }
+    
+    
+    
+    
+    
     
     
     //Este método controla el tipo de modos que se pueden elegir
@@ -329,15 +383,19 @@ public class MorrasMetodizado {
         
         
         //Variable que almacenará el valor que introduxca el usuario
+        
         int puntos = 0;
         
         //Variable booleana necesaria para la lógica del bucle
+        
         boolean seguir = true;
         
         
         //Doble bucle do while, en uno se controla que no se escriban caracteres
         //no númericos y en otro que controla que los puntos tengan que ser o 5
         //o 21
+        
+        
         do {
             
             //Inicializamos a true, esto se hace ya que en el primer ciclo del
@@ -358,8 +416,11 @@ public class MorrasMetodizado {
                 //Try catch para coger la excepción si introducimos valores no
                 //numéricos
                 //Y así poder hacer la conversión de String a int correctamente
+                
                 try {
+                    
                     //Inicializamos la variable con lo que el usuario introduzca
+                    
                     puntos = Integer.parseInt
                     (JOptionPane.showInputDialog(null,
                             "Existen dos formas de juego\n"
@@ -368,11 +429,13 @@ public class MorrasMetodizado {
                     
                     //Ponemos a false para salir del primer bucle y comprobar la
                     //segunda conndición 
+                    
                     seguir = false;
 
                 } catch (NumberFormatException nfe) {
                     
                     //Mensaje que salta si hay error de introducción
+                    
                     JOptionPane.showMessageDialog(null,
                             "Valor no numérico, repita");
                 }
@@ -380,6 +443,7 @@ public class MorrasMetodizado {
             } while (seguir);
             
              //Mensaje que salta si no elegimos ni 5 ni 21
+             
             if (puntos != 5 && puntos != 21) {
                 JOptionPane.showMessageDialog(null,
                         "No ha elegido ni 5 ni 21, repita");
@@ -389,9 +453,14 @@ public class MorrasMetodizado {
         
         //Devolvemos la variable ya filtrada, esta será recogida por la variable
         //puntos en el método partidaSimple
+        
         return puntos;
 
     }
+    
+    
+    
+    
     
     
     //Este método filtra el número que introduce el usuario para jugar
@@ -401,10 +470,12 @@ public class MorrasMetodizado {
         
         
          //Variable que almacenará el valor que introduxca el usuario
+         
         int numero = 0;
         
         
         //Variable booleana necesaria para la lógica del bucle
+        
         boolean seguir = true;
         
         
@@ -412,6 +483,7 @@ public class MorrasMetodizado {
         //no númericos y en otro se controla que no superen el rango de dedos 
         //disponibles para jugar desde el puño cerrado(0)
         //a la manos abierta (5)
+        
         do {
             
             
@@ -436,18 +508,23 @@ public class MorrasMetodizado {
                 //Y así poder hacer la conversión de String a int correctamente
                 
                 try {
+                    
+                    
                     //Inicializamos la variable con lo que el usuario introduzca
+                    
                     numero = Integer.parseInt
                 (JOptionPane.showInputDialog("La maquina ya tiene un número"
                         + " elegido ahora uno elige tu uno entre el 0 y el 5"));
                     
                      //Ponemos a false para salir del primer bucle y comprobar la
                     //segunda conndición de rango
+                    
                     seguir = false;
 
                 } catch (NumberFormatException nfe) {
                     
                      //Mensaje que salta si hay error de introducción
+                     
                     JOptionPane.showMessageDialog(null,
                             "Valor no numérico, repita");
                 }
@@ -456,6 +533,7 @@ public class MorrasMetodizado {
             
             
               //Mensaje que salta si nos pasamos de rango
+              
             if (numero < 0 || numero > 5) {
                 JOptionPane.showMessageDialog(null,
                         "Numero fuera de rango, repita");
@@ -464,14 +542,21 @@ public class MorrasMetodizado {
         
         
         //Condición reglas, si se saca el puño cerrado, equivale a 1 dedo
+        
         if (numero == 0) {
             numero = 1;
         }
         
         //Devolvemos el valor ya filtrado que será recogida por la variable
         //numeroJugador en el método partidaSimple
+        
         return numero;
     }
+    
+    
+    
+    
+    
 
     
     //Este método filtra el supuesto total que se prevee que va a salir
@@ -481,9 +566,11 @@ public class MorrasMetodizado {
     private static int filtrarNumeroPredecir(int numeroJugador) {
         
         //Variable que almacenará el valor que introduzca el usuario
+        
         int numero = 0;
         
         //Variable booleana necesaria para la lógica del bucle
+        
         boolean seguir = true;
 
         JOptionPane.showMessageDialog(null,
@@ -498,6 +585,8 @@ public class MorrasMetodizado {
         //un número mayor al que has sacado ya que el total de dedos entre ambos 
         //jugadores no puede ser igual o menor al número de dedos que se ha 
         //sacado anteriormente
+        
+        
         do {
             
             
@@ -510,6 +599,8 @@ public class MorrasMetodizado {
             //repetir el bucle se saltaria código ya que al ser la variable 
             //seguir=false no entraría en el segundo bucle y habria errores en 
             //el programa
+            
+            
             seguir = true;
             
             
@@ -518,19 +609,24 @@ public class MorrasMetodizado {
                 //Try catch para coger la excepción si introducimos valores no
                 //numéricos
                 //Y así poder hacer la conversión de String a int correctamente
+                
+                
                 try {
                     
                     //Inicializamos la variable con lo que el usuario introduzca
+                    
                     numero = Integer.parseInt(JOptionPane.showInputDialog(
                             "Piensa cual crees que es el total"));
                     
                     //Ponemos a false para salir del primer bucle y comprobar la
                     //segunda conndición de rango
+                    
                     seguir = false;
 
                 } catch (NumberFormatException nfe) {
                     
                     //Mensaje que salta si hay error de introducción
+                    
                     JOptionPane.showMessageDialog(null,
                             "Valor no numérico, repita");
                 }
@@ -538,6 +634,7 @@ public class MorrasMetodizado {
             } while (seguir);
             
             //Mensaje que salta si no coincidimos con el rango disponible
+            
             if (numero <= numeroJugador || numero > 10) {
                 JOptionPane.showMessageDialog(null,
                         "No puedes predecir un número mas pequeño del"
@@ -548,9 +645,15 @@ public class MorrasMetodizado {
         
         //Devolvemos el valor ya filtrado que será recogida por la variable
         //prediccionJugador en el método partidaSimple
+        
         return numero;
 
     }
+    
+    
+    
+    
+    
     
     
     //Este método muestra cada uno de los datos de cada jugador y devuelve
@@ -566,6 +669,7 @@ public class MorrasMetodizado {
         
         //Variable que muestra lo que ha sacado cada jugador, cual es la
         //prediccion de cada uno y la suma de los dedos sacados en cada ronda
+        
         String resultado = "";
         String datos = """
                      
@@ -590,29 +694,38 @@ public class MorrasMetodizado {
         //resultado con diferentes cadenas de texto
         
         //Empate si ambos aciertan
+        
         if (prediccionJugador == suma && prediccionMaquina == suma) {
             resultado = "Empate, siguiente ronda";
 
         } else {
+            
             //Gana el usuario si acierta
+            
             if (prediccionJugador == suma) {
                 resultado = "Has ganado";
 
             }
+            
             //Gana la máquina si acierta
+            
             if (prediccionMaquina == suma) {
                 resultado = "Ha ganado la maquina";
 
             }
+            
             //No gana nadie si ninguno acierta
+            
             if (prediccionJugador != suma && prediccionMaquina != suma) {
                 resultado = "Nadie ha ganado se repite la ronda";
             }
         }
         
+        
         //Se devuelve el valor de la cadena y este valor se almacenará en la
         //variable resultado en el método partidaSimple que se usara para contar
         //las victorias de ambos jugadores
+        
         return resultado;
 
     }
