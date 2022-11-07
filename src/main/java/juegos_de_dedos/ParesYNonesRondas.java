@@ -426,7 +426,7 @@ public class ParesYNonesRondas {
                     JOptionPane.showMessageDialog(null,
                             "Has ganado ya que la maquina no tiene"
                                 + " opcion de remontar con el numero de rondas"
-                                    + "que quedan");
+                                    + " que quedan");
                     break;
                 }
 
@@ -434,7 +434,7 @@ public class ParesYNonesRondas {
                     JOptionPane.showMessageDialog(null,
                             "Ha ganado la maquina ya que no tienes "
                                 + " opcion de remontar con el numero de rondas"
-                                    + "que quedan");
+                                    + " que quedan");
                     break;
                 }
 
