@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Random;
 import javax.swing.JOptionPane;
 
-public class MorrasMetodizado {
+public class MorraMetodizado {
     
     
     //Método main del programa
