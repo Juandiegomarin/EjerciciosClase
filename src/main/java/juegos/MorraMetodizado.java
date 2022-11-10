@@ -1,4 +1,4 @@
-package juegos_de_dedos;
+package juegos;
 
 import java.util.InputMismatchException;
 import java.util.Random;
@@ -259,7 +259,7 @@ public class MorraMetodizado {
             // no puede ser igual o menor al número de dedos que se ha sacado
             //anteriormente
             
-            prediccionMaquina = rd.nextInt(11 - numeroMaquina + 1) + numeroMaquina;
+            prediccionMaquina = rd.nextInt(11 - numeroMaquina + 1) + numeroMaquina+1;
             
             //Incializamos esta variable con la suma del número de dedos que ha
             //sacado cada jugador

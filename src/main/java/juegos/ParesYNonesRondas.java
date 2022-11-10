@@ -1,4 +1,4 @@
-package juegos_de_dedos;
+package juegos;
 
 import java.util.InputMismatchException;
 import java.util.Random;

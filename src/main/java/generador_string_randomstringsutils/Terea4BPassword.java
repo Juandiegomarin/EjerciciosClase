@@ -178,7 +178,7 @@ public class Terea4BPassword {
             //Añadimos la secuencia a la lista
             
             listaSecuencias.add(secuencia);
-
+            
         }
         
         //Mostramos la lista por pantalla
