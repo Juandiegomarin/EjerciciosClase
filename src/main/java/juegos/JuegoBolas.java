@@ -45,7 +45,7 @@ public class JuegoBolas {
         do {
 
             do {
-                    
+                seguir=true;    
             
 
                 System.out.println("Introduce el precio para hacer descuento");
@@ -58,13 +58,16 @@ public class JuegoBolas {
                 entrada.nextLine();
             } while (seguir);
             
-            bola = rd.nextInt(4);
+            bola = 3;
+            
             do {
                 
                 if (bola == 3) {
 
                     System.out.println(bolaVerde + ", has sacado la bola verde");
-                     bola = rd.nextInt(3);
+                    bola = rd.nextInt(3);
+                    System.out.println("Sacando otra bola"); 
+                    seguir=true;
                 } else if (bola == 0) {
                         System.out.println("Has sacado la bola azul, tienes un " + bolaAzul
                                 + " de descuento para el precio " + precio);
@@ -95,6 +98,7 @@ public class JuegoBolas {
 
                 System.out.println("¿Hay mas clientes en la cola?");
                 opcion = entrada.nextLine();
+                
 
                 if (!opcion.equalsIgnoreCase("si")
                         && !opcion.equalsIgnoreCase("no")) {
