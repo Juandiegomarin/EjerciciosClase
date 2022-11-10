@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 public class utilidades {
 
-    public static int filtrarNumeroEnteroEscaner() {
+    public static int filtrarNumeroEnteroSccaner() {
 
         Scanner entrada = new Scanner(System.in);
 
