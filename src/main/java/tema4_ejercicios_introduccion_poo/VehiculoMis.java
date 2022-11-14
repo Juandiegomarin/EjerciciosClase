@@ -2,7 +2,7 @@ package tema4_ejercicios_introduccion_poo;
 
 import javax.swing.JOptionPane;
 
-public class MisVehiculos {
+public class VehiculoMis {
 
     public static void main(String[] args) {
 
@@ -46,6 +46,7 @@ public class MisVehiculos {
                        "Disponible: " +miCacharro.getDisponible()+"\n");
         
        String coche= miCacharro.toString();
+       System.out.println(miCacharro);
        System.out.println(coche);
        
        
