@@ -2,7 +2,7 @@ package ex_bloque_1_margaritas;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import utlidades.utilidades;
+import utlidades.Utilidades;
 
 public class Prueba {
 
@@ -48,7 +48,7 @@ public class Prueba {
             //filtrado .Le pasamos por parámetro el mínimo y el máximo de 
             //margaritas posibles
             
-            numeroMargaritas = utilidades.filtrarNumeroEnteroSccanerRango(
+            numeroMargaritas = Utilidades.filtrarNumeroEnteroSccanerRango(
                 NUMERO_MINIMO_MARGARITAS, NUMERO_MAXIMO_MARGARITAS);
             
             
@@ -80,7 +80,7 @@ public class Prueba {
                  //filtrado .Le pasamos por parámetro el mínimo y el máximo de 
                  // numero a salir del dado
                  
-                    numeroDado = utilidades.numeroEnteroRandom
+                    numeroDado = Utilidades.numeroEnteroRandom
                            (MINIMO_NUMERO_DADO, MAXIMO_NUMERO_DADO);
                     
                     

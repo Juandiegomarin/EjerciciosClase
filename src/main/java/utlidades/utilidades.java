@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
-public class utilidades {
+public class Utilidades {
 
     public static int filtrarNumeroEnteroSccaner() {
 
@@ -148,7 +148,7 @@ public class utilidades {
         return numero;
     }
 
-    public static double filtrarDecimalEnteroJOptionPane() {
+    public static double filtrarNumeroDecimalJOptionPane() {
 
         double numero = 0;
         boolean seguir = true;
@@ -194,7 +194,7 @@ public class utilidades {
         return numero;
     }
 
-    public static double numeroEnteroRandom(double minimo, double maximo) {
+    public static double numeroDecimalRandom(double minimo, double maximo) {
 
         Random random = new Random();
         double numero = random.nextDouble(maximo - minimo + 1) + minimo;
