@@ -93,12 +93,10 @@ public class Persona {
 
     private static boolean filtrarSexo(char s) {
 
-        boolean resultado = true;
+        boolean resultado = false;
         if (s == 'H' || s == 'M') {
 
             resultado = true;
-        } else {
-            resultado = false;
         }
 
         return resultado;
@@ -116,7 +114,11 @@ public class Persona {
         numero = Integer.parseInt(nif);
 
         resto = numero % 23;
-
+        
+        
+        String letras="TRWAGMYFPDXBNJZSQVHLCKE";
+        
+        
         if (resto == 0) {
             letra = "T";
         } else if (resto == 1) {
@@ -180,21 +182,19 @@ public class Persona {
         return mayorEdad;
 
     }
-    
-    public float calcularIMC(){
-    
-    float imc=0f;
-    
-    imc=(float)(this.peso/Math.pow((double)this.altura/100, 2));
-    
-    
-    
-    return imc;
-    
+
+    public float calcularIMC() {
+
+        float imc = 0f;
+
+        imc = (float) (this.peso / Math.pow((double) this.altura / 100, 2));
+
+        return imc;
+
     }
-    
-    public void darLike(Serie s){
-    
-    s.setLikes(s.getLikes()+1);
+
+    public void darLike(Serie s) {
+
+        s.setLikes(s.getLikes() + 1);
     }
 }
