@@ -4,7 +4,7 @@ package tema4_ejercicios_introduccion_poo;
 import java.util.Scanner;
 
 
-public class ServicioSerie {
+public class SerieServicio {
     
     
     

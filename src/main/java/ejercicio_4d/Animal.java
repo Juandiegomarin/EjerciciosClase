@@ -1,4 +1,4 @@
-package animal;
+package ejercicio_4d;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -8,13 +8,13 @@ public class Animal {
     private LocalDate fechaNacimiento;
     private String nombre;
     private Tipo tipo;
-    private double peso;
+    private int peso;
     private Estado estado;
 
     public Animal() {
     }
 
-    public Animal(LocalDate fechaNacimiento, String nombre, Tipo tipo, double peso, Estado estado) {
+    public Animal(LocalDate fechaNacimiento, String nombre, Tipo tipo, int peso, Estado estado) {
         this.fechaNacimiento = fechaNacimiento;
         this.nombre = nombre;
         this.tipo = tipo;
@@ -46,11 +46,11 @@ public class Animal {
         this.tipo = tipo;
     }
 
-    public double getPeso() {
+    public int getPeso() {
         return peso;
     }
 
-    public void setPeso(double peso) {
+    public void setPeso(int peso) {
         this.peso = peso;
     }
 
@@ -67,7 +67,7 @@ public class Animal {
         return "Animal{" + "fechaNacimiento=" + fechaNacimiento + ", nombre=" + nombre + ", tipo=" + tipo + ", peso=" + peso + ", estado=" + estado + '}';
     }
 
-    public void darDeComer(double gramos) {
+    public void darDeComer(int gramos) {
         gramos = Math.abs(gramos);
 
         this.peso = this.peso + gramos;
@@ -76,24 +76,21 @@ public class Animal {
 
     public void dormirAnimal() {
 
-        if (this.estado.equals(Estado.DESPIERTO)) {
-            this.estado = Estado.DURMIENDO;
-        }
+        this.estado = Estado.DURMIENDO;
 
     }
 
     public void despertarAnimal() {
 
-        if (this.estado.equals(Estado.DURMIENDO)) {
-            this.estado = Estado.DESPIERTO;
-        }
+        this.estado = Estado.DESPIERTO;
+
     }
 
     public void descansarAnimal() {
 
-        if (this.estado.equals(Estado.JUGANDO)) {
+        
             this.estado = Estado.REPOSO;
-        }
+        
 
     }
 
@@ -101,16 +98,15 @@ public class Animal {
 
         cantidadMinutos = Math.abs(cantidadMinutos);
 
-        if (cantidadMinutos < 30) {
-            this.peso = this.peso - 20;
+        if (cantidadMinutos > 180) {
+            throw new IllegalArgumentException("No puedes jugar más de 180 minutos");
         }
-        if (cantidadMinutos >= 30 && cantidadMinutos <= 180) {
-
-            this.peso = this.peso - ((cantidadMinutos / 30) * 20);
-
+        if ( cantidadMinutos >= 30) {
+            this.peso -= (cantidadMinutos / 30) * 20;
         } else {
-            throw new IllegalArgumentException("El animal no puede jugar mas de 180 min");
-        };
+            this.peso -= 10;
+        }
+        this.estado = Estado.JUGANDO;
 
     }
 
@@ -125,8 +121,8 @@ public class Animal {
             aux.setPeso(pet.getPeso());
             aux.setFechaNacimiento(pet.getFechaNacimiento());
         } catch (NullPointerException npe) {
-            
-            aux=new Animal(LocalDate.of(2002, Month.NOVEMBER, 21), "Pet", Tipo.GATO, 5000.00, Estado.REPOSO);
+            System.out.println("No se puede clonar animales nulos");
+            aux = new Animal(LocalDate.of(2002, Month.NOVEMBER, 21), "Pet", Tipo.GATO, 5000, Estado.REPOSO);
         }
 
         return aux;

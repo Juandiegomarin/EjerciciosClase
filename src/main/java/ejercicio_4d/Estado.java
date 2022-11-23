@@ -1,5 +1,5 @@
 
-package animal;
+package ejercicio_4d;
 
 
 public enum Estado {

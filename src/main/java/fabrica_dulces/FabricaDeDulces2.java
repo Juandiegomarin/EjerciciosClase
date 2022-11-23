@@ -1,4 +1,4 @@
-package estepona_turronera;
+package fabrica_dulces;
 
 import java.util.Scanner;
 import javax.swing.JOptionPane;

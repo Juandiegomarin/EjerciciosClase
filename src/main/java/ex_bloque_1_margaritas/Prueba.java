@@ -2,7 +2,7 @@ package ex_bloque_1_margaritas;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import utlidades.Utilidades;
+import utilidades.Utilidades;
 
 public class Prueba {
 
