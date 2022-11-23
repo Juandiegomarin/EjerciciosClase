@@ -1,6 +1,7 @@
 package animal;
 
 import java.time.LocalDate;
+import java.time.Month;
 
 public class Animal {
 
@@ -87,49 +88,48 @@ public class Animal {
             this.estado = Estado.DESPIERTO;
         }
     }
-    
-    public void descansarAnimal(){
-    
+
+    public void descansarAnimal() {
+
         if (this.estado.equals(Estado.JUGANDO)) {
             this.estado = Estado.REPOSO;
         }
-        
+
     }
-    
-    public void ponerAJugar(int cantidadMinutos){
-        
-        
-        cantidadMinutos=Math.abs(cantidadMinutos);
-        
-        if(cantidadMinutos<30){
-        this.peso=this.peso-20;
+
+    public void ponerAJugar(int cantidadMinutos) {
+
+        cantidadMinutos = Math.abs(cantidadMinutos);
+
+        if (cantidadMinutos < 30) {
+            this.peso = this.peso - 20;
         }
-        if(cantidadMinutos>=30&&cantidadMinutos<=180){
-        
-        this.peso=this.peso-((cantidadMinutos/30)*20);    
+        if (cantidadMinutos >= 30 && cantidadMinutos <= 180) {
+
+            this.peso = this.peso - ((cantidadMinutos / 30) * 20);
+
+        } else {
+            throw new IllegalArgumentException("El animal no puede jugar mas de 180 min");
+        };
+
+    }
+
+    public static Animal clonarAnimal(Animal pet) {
+
+        Animal aux = new Animal();
+
+        try {
+            aux.setNombre(pet.getNombre());
+            aux.setTipo(pet.getTipo());
+            aux.setEstado(pet.getEstado());
+            aux.setPeso(pet.getPeso());
+            aux.setFechaNacimiento(pet.getFechaNacimiento());
+        } catch (NullPointerException npe) {
             
-        }else{throw new IllegalArgumentException("El animal no puede jugar mas de 180 min");};
-    
-    
-    }
-    
-    public static Animal clonarAnimal(Animal pet){
-    
-    Animal aux = new Animal();
-    
-    if(pet.equals(null)){
-    
-        throw new NullPointerException("La persona es nula, no se puede clonar");
-    
-    }
-    
-    aux.setNombre(pet.getNombre());
-    aux.setTipo(pet.getTipo());
-    aux.setEstado(pet.getEstado());
-    aux.setPeso(pet.getPeso());
-    aux.setFechaNacimiento(pet.getFechaNacimiento());
-    
-    return aux;
-    
+            aux=new Animal(LocalDate.of(2002, Month.NOVEMBER, 21), "Pet", Tipo.GATO, 5000.00, Estado.REPOSO);
+        }
+
+        return aux;
+
     }
 }
