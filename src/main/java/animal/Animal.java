@@ -97,8 +97,39 @@ public class Animal {
     }
     
     public void ponerAJugar(int cantidadMinutos){
+        
+        
+        cantidadMinutos=Math.abs(cantidadMinutos);
+        
+        if(cantidadMinutos<30){
+        this.peso=this.peso-20;
+        }
+        if(cantidadMinutos>=30&&cantidadMinutos<=180){
+        
+        this.peso=this.peso-((cantidadMinutos/30)*20);    
+            
+        }else{throw new IllegalArgumentException("El animal no puede jugar mas de 180 min");};
     
     
+    }
+    
+    public static Animal clonarAnimal(Animal pet){
+    
+    Animal aux = new Animal();
+    
+    if(pet.equals(null)){
+    
+        throw new NullPointerException("La persona es nula, no se puede clonar");
+    
+    }
+    
+    aux.setNombre(pet.getNombre());
+    aux.setTipo(pet.getTipo());
+    aux.setEstado(pet.getEstado());
+    aux.setPeso(pet.getPeso());
+    aux.setFechaNacimiento(pet.getFechaNacimiento());
+    
+    return aux;
     
     }
 }
