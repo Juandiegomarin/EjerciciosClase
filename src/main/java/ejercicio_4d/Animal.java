@@ -71,6 +71,7 @@ public class Animal {
         gramos = Math.abs(gramos);
 
         this.peso = this.peso + gramos;
+        this.estado=Estado.COMIENDO;
 
     }
 
@@ -99,7 +100,7 @@ public class Animal {
         cantidadMinutos = Math.abs(cantidadMinutos);
 
         if (cantidadMinutos > 180) {
-            throw new IllegalArgumentException("No puedes jugar más de 180 minutos");
+            throw new IllegalArgumentException();
         }
         if ( cantidadMinutos >= 30) {
             this.peso -= (cantidadMinutos / 30) * 20;

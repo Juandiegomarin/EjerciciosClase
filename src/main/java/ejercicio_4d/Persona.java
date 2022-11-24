@@ -53,6 +53,7 @@ public class Persona {
         } catch (IllegalArgumentException e) {
             System.out.println("No puedes jugar más de 180 minutos, reducimos la cantidad de minutos a 180");
             pet.ponerAJugar(180);
+            pet.setEstado(Estado.JUGANDO);
         }
     
     }
