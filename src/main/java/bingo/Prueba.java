@@ -13,5 +13,22 @@ public class Prueba {
         miCarton.imprimirCarton();
 
     }
+    
+    
+    public static int sacarNumero(){
+    
+    int numero;
+    
+    
+    numero=utilidades.Utilidades.numeroEnteroRandom(1, 90);
+    
+    
+    
+    return numero;
+    
+    
+    }
+    
+    
 
 }
