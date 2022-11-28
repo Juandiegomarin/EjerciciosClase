@@ -109,9 +109,11 @@ public class Carton {
         String resultado="";
         
         for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 8; j++) {
-                resultado+="["+carton[i][j]+"]";
+           
+            for (int j = 0; j < 9; j++) {
+                resultado+=carton[i][j]+"   ";
             }
+            
             resultado+="\n";
         }
         JOptionPane.showMessageDialog(null, resultado);
