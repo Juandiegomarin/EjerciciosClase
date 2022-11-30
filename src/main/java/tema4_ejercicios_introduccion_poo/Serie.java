@@ -1,6 +1,8 @@
 
 package tema4_ejercicios_introduccion_poo;
 
+import java.util.Objects;
+
 
 public class Serie {
     
@@ -73,6 +75,50 @@ public class Serie {
     public void setProductor(String productor) {
         this.productor = productor;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 59 * hash + Objects.hashCode(this.titulo);
+        hash = 59 * hash + Objects.hashCode(this.genero);
+        hash = 59 * hash + Objects.hashCode(this.sinopsis);
+        hash = 59 * hash + this.numeroTemporadas;
+        hash = 59 * hash + this.likes;
+        hash = 59 * hash + Objects.hashCode(this.productor);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Serie other = (Serie) obj;
+        if (this.numeroTemporadas != other.numeroTemporadas) {
+            return false;
+        }
+        if (this.likes != other.likes) {
+            return false;
+        }
+        if (!Objects.equals(this.titulo, other.titulo)) {
+            return false;
+        }
+        if (!Objects.equals(this.genero, other.genero)) {
+            return false;
+        }
+        if (!Objects.equals(this.sinopsis, other.sinopsis)) {
+            return false;
+        }
+        return Objects.equals(this.productor, other.productor);
+    }
+    
+    
 
     @Override
     public String toString() {

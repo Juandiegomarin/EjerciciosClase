@@ -16,7 +16,7 @@ public class SerieTest {
         Serie peaky= new   Serie("Peaky Blinders", "Acción", "Guerra", 6, "Yo");
         
         
-        
+        System.out.println(peaky.hashCode());
         
     }
     
