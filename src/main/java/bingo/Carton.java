@@ -106,17 +106,120 @@ public class Carton {
 
     public void imprimirCarton() {
 
-        String resultado="";
-        
+        String resultado = "";
+
         for (int i = 0; i < 3; i++) {
-           
+
             for (int j = 0; j < 9; j++) {
-                resultado+=carton[i][j]+"   ";
+                resultado += carton[i][j] + "   ";
             }
-            
-            resultado+="\n";
+
+            resultado += "\n";
         }
         JOptionPane.showMessageDialog(null, resultado);
     }
 
-}
+    public void comprobarNumero(int numero) {
+
+        for (int i = 0; i < 3; i++) {
+
+            for (int j = 0; j < 9; j++) {
+
+                if (carton[i][j] == numero) {
+
+                    carton[i][j] = 0;
+                }
+            }
+
+        }
+
+    }
+
+    public boolean comprobarLinea() {
+        
+        
+        boolean seguir=true;
+
+        
+
+            if ((carton[0][0] == 0
+                    && carton[0][1] == 0
+                    && carton[0][2] == 0
+                    && carton[0][3] == 0
+                    && carton[0][4] == 0
+                    && carton[0][5] == 0
+                    && carton[0][6] == 0
+                    && carton[0][7] == 0
+                    && carton[0][8] == 0) || (carton[1][0] == 0
+                    && carton[1][1] == 0
+                    && carton[1][2] == 0
+                    && carton[1][3] == 0
+                    && carton[1][4] == 0
+                    && carton[1][5] == 0
+                    && carton[1][6] == 0
+                    && carton[1][7] == 0
+                    && carton[1][8] == 0) || (carton[2][0] == 0
+                    && carton[2][1] == 0
+                    && carton[2][2] == 0
+                    && carton[2][3] == 0
+                    && carton[2][4] == 0
+                    && carton[2][5] == 0
+                    && carton[2][6] == 0
+                    && carton[2][7] == 0
+                    && carton[2][8] == 0)) {
+
+                
+                seguir = false;
+                
+            }
+        
+
+        
+        return seguir;
+    }
+    
+    public String comprobarBingo(){
+    
+       String resultado="";
+    
+       
+            if (carton[0][0] == 0
+                    && carton[0][1] == 0
+                    && carton[0][2] == 0
+                    && carton[0][3] == 0
+                    && carton[0][4] == 0
+                    && carton[0][5] == 0
+                    && carton[0][6] == 0
+                    && carton[0][7] == 0
+                    && carton[0][8] == 0 && carton[1][0] == 0
+                    && carton[1][1] == 0
+                    && carton[1][2] == 0
+                    && carton[1][3] == 0
+                    && carton[1][4] == 0
+                    && carton[1][5] == 0
+                    && carton[1][6] == 0
+                    && carton[1][7] == 0
+                    && carton[1][8] == 0 && carton[2][0] == 0
+                    && carton[2][1] == 0
+                    && carton[2][2] == 0
+                    && carton[2][3] == 0
+                    && carton[2][4] == 0
+                    && carton[2][5] == 0
+                    && carton[2][6] == 0
+                    && carton[2][7] == 0
+                    && carton[2][8] == 0) {
+                
+                 JOptionPane.showMessageDialog(null, "Bingoooooo");
+                resultado="Bingoooo";
+                
+            }
+            
+            return resultado;
+        }
+    
+    
+    
+    
+    }
+
+
