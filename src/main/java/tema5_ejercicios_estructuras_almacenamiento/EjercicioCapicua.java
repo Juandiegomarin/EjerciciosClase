@@ -26,27 +26,16 @@ public class EjercicioCapicua {
 
         for (int i = 0; i < numeroString.length(); i++) {
 
-            if (numeroString.length() % 2 != 0) {
+            if (i == contadorAtras) {
+                break;
+            }
+            if (i > contadorAtras) {
+                break;
+            }
+            if (numeroString.charAt(i) != numeroString.charAt(contadorAtras)) {
 
-                if (numeroString.charAt(i) != numeroString.charAt(contadorAtras)) {
-
-                    resultado = false;
-
-                }
-
-            } else {
-
-                if (numeroString.indexOf(i) == numeroString.indexOf(contadorAtras)) {
-
-                    break;
-
-                }
-
-                if (numeroString.charAt(i) != numeroString.charAt(contadorAtras)) {
-
-                    resultado = false;
-
-                }
+                resultado = false;
+                break;
 
             }
 
