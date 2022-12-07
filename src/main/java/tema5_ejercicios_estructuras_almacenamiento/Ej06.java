@@ -37,6 +37,7 @@ public class Ej06 {
                 if (array1[i] != array2[i]) {
 
                     resultado=false;
+                    break;
                 }
 
             }
