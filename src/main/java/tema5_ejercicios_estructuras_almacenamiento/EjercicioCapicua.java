@@ -13,7 +13,7 @@ public class EjercicioCapicua {
         System.out.println("Introduce un número para comprobar si es capicua");
         numero = entrada.nextInt();
 
-        System.out.println("Es el numero " + numero + " capicua");
+        System.out.println("¿Es el numero " + numero + " capicua?");
         System.out.println(comprobarCapicua(numero));
 
     }

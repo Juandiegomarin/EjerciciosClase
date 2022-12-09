@@ -18,7 +18,7 @@ public class EjercicioStringGenerado {
         
         System.out.println("La cadena generada es "+generarString(mayusculas));
         
-        System.out.println("Vamos a crear un array de cadenas, que longitud quieres");
+        System.out.println("Vamos a crear un array de cadenas,¿Cuantas cadenas quieres?");
         longitudCadena=entrada.nextInt();
         crearArrayCadenas(longitudCadena, mayusculas);
         
@@ -49,9 +49,11 @@ public class EjercicioStringGenerado {
     
         for (int i = 0; i < list.length; i++) {
             
-            
-            System.out.println(list[i]);
-            
+            if(i<list.length-1){
+            System.out.print("["+list[i]+"]-");
+            }else{
+             System.out.println("["+list[i]+"]");
+            }
         }
     
     
