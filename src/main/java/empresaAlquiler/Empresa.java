@@ -100,13 +100,13 @@ public class Empresa {
 
     }
 
-    public void buscarCliente(String nif) {
+    public Cliente buscarCliente(String nif) {
 
-        this.clientes.buscarCliente(nif);
+        return this.clientes.buscarCliente(nif);
     }
 
-    public void buscarVehiculo(String bastidor) {
+    public Vehiculo buscarVehiculo(String bastidor) {
 
-        this.vehiculos.buscarVehiculo(bastidor);
+        return this.vehiculos.buscarVehiculo(bastidor);
     }
 }

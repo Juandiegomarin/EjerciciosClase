@@ -14,7 +14,10 @@ public class Prueba {
         
         System.out.println(e1);
         
-        
+        System.out.println(e1.buscarCliente("1"));
+        System.out.println("--------------------------------------");
+        e1.registrarCliente();
+        System.out.println(e1);
     }
     
 }
