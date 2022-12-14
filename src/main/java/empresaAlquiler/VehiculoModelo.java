@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Enum.java to edit this template
  */
-package tema5_ejercicios_estructuras_almacenamiento;
+package empresaAlquiler;
 
 import java.util.Random;
 
@@ -58,7 +58,7 @@ public enum VehiculoModelo {
     public static VehiculoModelo modeloAleatorio() {
 
         VehiculoModelo[] modelos = VehiculoModelo.values();
-        int posicion = utilidades.Utilidades.numeroEnteroRandom(0, modelos.length);
+        int posicion = utilidades.Utilidades.numeroEnteroRandom(0, modelos.length-1);
 
         return modelos[posicion];
 

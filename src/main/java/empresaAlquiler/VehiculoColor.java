@@ -1,5 +1,5 @@
 
-package tema5_ejercicios_estructuras_almacenamiento;
+package empresaAlquiler;
 
 
 public enum VehiculoColor {
@@ -10,7 +10,7 @@ public enum VehiculoColor {
     public static VehiculoColor colorAleatorio() {
 
         VehiculoColor[] colores = VehiculoColor.values();
-        int posicion = utilidades.Utilidades.numeroEnteroRandom(0, colores.length);
+        int posicion = utilidades.Utilidades.numeroEnteroRandom(0, colores.length-1);
 
         return colores[posicion];
 
