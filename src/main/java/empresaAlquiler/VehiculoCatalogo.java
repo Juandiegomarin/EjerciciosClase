@@ -37,6 +37,10 @@ public class VehiculoCatalogo {
         return longitud;
     }
 
+    public Vehiculo[] getVehiculos() {
+        return vehiculos;
+    }
+    
     private int buscarVehiculo(Vehiculo v) {
 
         for (int i = 0; i < vehiculos.length; i++) {

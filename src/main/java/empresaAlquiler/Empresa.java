@@ -1,5 +1,6 @@
 package empresaAlquiler;
 
+import java.time.LocalDate;
 import java.util.Objects;
 import org.apache.commons.lang3.RandomStringUtils;
 
@@ -86,6 +87,24 @@ public class Empresa {
     @Override
     public String toString() {
         return "Empresa{" + "cif=" + cif + ",\n nombre=" + nombre + ",\n vehiculos=" + vehiculos + ",\n clientes=" + clientes + ",\n alquileres=" + alquileres + '}';
+    }
+    
+    public void registrarAlquiler(LocalDate fechaAlq,int duracion,Cliente c, Vehiculo v){
+        
+        if(this.clientes.buscarCliente(c.getNif())!=null&&this.vehiculos.buscarVehiculo(v.getBastidor())!=null){
+        if(v.isDisponible()){
+            v.setDisponible(false);
+            Alquiler a = new Alquiler(c, v, fechaAlq, duracion);
+            this.alquileres.añadirAlquiler(a);
+        }
+        }
+        
+    
+    }
+    
+    public void recibirVehiculo(Alquiler a){
+    
+    a.getVehiculo().setDisponible(true);
     }
 
     public void registrarCliente() {

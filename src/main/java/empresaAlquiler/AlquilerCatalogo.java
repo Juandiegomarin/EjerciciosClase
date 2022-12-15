@@ -50,7 +50,7 @@ public class AlquilerCatalogo {
 
     }
 
-    public Alquiler buscarVehiculo(int id) {
+    public Alquiler buscarAlquiler(int id) {
 
         Alquiler aux = new Alquiler();
         aux.setIdAlquiler(id);

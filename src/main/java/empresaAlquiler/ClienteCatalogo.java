@@ -36,6 +36,11 @@ public class ClienteCatalogo {
         return longitud;
     }
 
+    public Cliente[] getListaCliente() {
+        return listaCliente;
+    }
+    
+    
     private int buscarCliente(Cliente c) {
 
         for (int i = 0; i < listaCliente.length; i++) {

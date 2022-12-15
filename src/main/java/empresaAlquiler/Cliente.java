@@ -13,7 +13,7 @@ public class Cliente {
     public Cliente() {
         this.nombre = ClienteNombre.nombreAleatorio();
         this.apellido = ClienteApellido.apellidoAleatorio();
-        this.nif = String.valueOf(contador++);
+        this.nif = String.valueOf(++contador);
     }
 
     public ClienteNombre getNombre() {

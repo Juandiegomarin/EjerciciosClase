@@ -18,11 +18,12 @@ public class Vehiculo {
     private static int contador=0;
 
     public Vehiculo() {
-        contador++;
-        this.bastidor = String.valueOf(contador++);
+        
+        this.bastidor = String.valueOf(++contador);
         this.matricula = RandomStringUtils.randomNumeric(4)+RandomStringUtils.randomAlphabetic(3).toUpperCase();
         this.color = VehiculoColor.colorAleatorio();
         this.modelo = VehiculoModelo.modeloAleatorio();
+        this.disponible=true;
     }
 
     
