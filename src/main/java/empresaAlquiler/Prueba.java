@@ -9,12 +9,22 @@ import javax.swing.JOptionPane;
 public class Prueba {
 
     public static void main(String[] args) {
+
+        //En este programa he decidido agregar clientes y vehiculos manualmente
+        // a la lista de clientes y de vehiculos.
+        //Se puede sustituir la opcion 1 y 2 registrando ya clientes y vehiculos
+        //generados automaticamente
+        
+        //Principal mente la empresa se crea con una lista de clientes y una de vehiculos
+        //Los alquileres a 0 , vamos añadiendo segun el transcurra el programa
+        
+        //Inmprimo los datos de la empresa antes y despues para ver los cambios
         int opcion = 0;
         Empresa e = new Empresa("Empresa clase");
 
         System.out.println(e);
-        String bastidor="";
-        String nif="";
+        String bastidor = "";
+        String nif = "";
         do {
             opcion = filtrarOpcion();
 
@@ -26,19 +36,8 @@ public class Prueba {
                     e.registrarVehiculoPedidaDatos(crearVehiculo());
                 }
                 case 3 -> {
-                                            
-                       JOptionPane.showMessageDialog(null,
-                            "Estos son los clientes de tu empresa para elegir el cliente"
-                                    + "introduzca el nif correspondiente"
-                            +e.getClientes()); 
-                       
-                       JOptionPane.showMessageDialog(null,
-                            "Estos son vehiculos de tu empresa para elegir el vehiculo"
-                                    + "introduzca el bastridor correspondiente"
-                            +e.getVehiculos()); 
-                       
-                       e.registrarAlquilerIntroducir();
-                    
+
+                    e.registrarAlquilerIntroducir();
 
                 }
                 case 4 -> {
@@ -166,5 +165,5 @@ public class Prueba {
         return LocalDate.of(dia, mes, año);
 
     }
-    
+
 }

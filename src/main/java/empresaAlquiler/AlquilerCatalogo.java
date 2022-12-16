@@ -11,12 +11,7 @@ public class AlquilerCatalogo {
         Math.abs(longitud);
         this.longitud = longitud;
         this.alquileres = new Alquiler[longitud];
-
-        for (int i = 0; i < alquileres.length; i++) {
-
-            this.alquileres[i] = new Alquiler();
-
-        }
+        
 
     }
 

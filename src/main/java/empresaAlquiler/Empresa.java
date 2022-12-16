@@ -170,8 +170,23 @@ public class Empresa {
     String bastidor="";
     int duracion=0;
     
+    JOptionPane.showMessageDialog(null,
+                            "Estos son los clientes de tu empresa para elegir el cliente"
+                                    + "introduzca el nif correspondiente"
+                            +getClientes()); 
     nif=JOptionPane.showInputDialog("Introduce el nif del cliente que alquila");
+    
+    
+    JOptionPane.showMessageDialog(null,
+                            "Estos son vehiculos de tu empresa para elegir el vehiculo"
+                                    + "introduzca el bastridor correspondiente"
+                            +getVehiculos());
+    
     bastidor=JOptionPane.showInputDialog("Introduce el bastidor del coche a alquilar");
+    
+    
+    
+    
     duracion=Utilidades.filtrarNumeroEnteroJOptionPane("Indica la duración del alquiler");
     return new Alquiler(clientes.buscarCliente(nif), vehiculos.buscarVehiculo(bastidor), LocalDate.now(),duracion);
     
