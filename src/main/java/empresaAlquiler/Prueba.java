@@ -12,6 +12,7 @@ public class Prueba {
 
         Empresa e1= new Empresa("Empresa 1");
         
+
         Vehiculo v = e1.getVehiculos().buscarVehiculo("1");
         Cliente c = e1.getClientes().buscarCliente("1");
         
@@ -28,6 +29,14 @@ public class Prueba {
         System.out.println(e1.getVehiculos());
         
         System.out.println("+++++++++++++++++");
+
+        
+        
+        System.out.println(e1.buscarCliente("1"));
+        System.out.println(e1.buscarVehiculo("1"));
+        System.out.println("--------------------------------------");
+        e1.registrarCliente();
+
         System.out.println(e1);
         System.out.println("////////////////////////////////////////");
         e1.registrarAlquiler(LocalDate.now(), 10, c2,v2);
