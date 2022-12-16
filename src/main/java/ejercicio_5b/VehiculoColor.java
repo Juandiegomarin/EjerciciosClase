@@ -1,5 +1,5 @@
 
-package empresaAlquiler;
+package ejercicio_5b;
 
 
 public enum VehiculoColor {

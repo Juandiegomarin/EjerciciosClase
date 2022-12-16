@@ -1,4 +1,4 @@
-package empresaAlquiler;
+package ejercicio_5b;
 
 import utilidades.*;
 import java.util.InputMismatchException;

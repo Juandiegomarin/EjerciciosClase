@@ -1,4 +1,4 @@
-package empresaAlquiler;
+package ejercicio_5b;
 
 import java.util.Objects;
 import org.apache.commons.lang3.RandomStringUtils;

@@ -1,4 +1,4 @@
-package empresaAlquiler;
+package ejercicio_5b;
 
 public class VehiculoCatalogo {
 

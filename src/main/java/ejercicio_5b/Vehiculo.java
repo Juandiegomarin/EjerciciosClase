@@ -1,5 +1,5 @@
 
-package empresaAlquiler;
+package ejercicio_5b;
 
 import java.util.Objects;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package empresaAlquiler;
+package ejercicio_5b;
 
 import java.time.LocalDate;
 import java.time.Year;
