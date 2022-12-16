@@ -10,8 +10,8 @@ public class Vehiculo {
     
     private String bastidor;
     private String matricula;
-    private VehiculoColor color;
-    private VehiculoModelo modelo;
+    private String color;
+    private String modelo;
     private boolean disponible;
     private double tarifa;
     
@@ -23,6 +23,14 @@ public class Vehiculo {
         this.matricula = RandomStringUtils.randomNumeric(4)+RandomStringUtils.randomAlphabetic(3).toUpperCase();
         this.color = VehiculoColor.colorAleatorio();
         this.modelo = VehiculoModelo.modeloAleatorio();
+        this.disponible=true;
+    }
+
+    public Vehiculo(String bastidor, String matricula, String color, String modelo) {
+        this.bastidor = bastidor;
+        this.matricula = matricula;
+        this.color = color;
+        this.modelo = modelo;
         this.disponible=true;
     }
 
@@ -61,21 +69,23 @@ public class Vehiculo {
         this.matricula = matricula;
     }
 
-    public VehiculoColor getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(VehiculoColor color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
-    public VehiculoModelo getModelo() {
+    public String getModelo() {
         return modelo;
     }
 
-    public void setModelo(VehiculoModelo modelo) {
+    public void setModelo(String modelo) {
         this.modelo = modelo;
     }
+
+   
 
     @Override
     public int hashCode() {

@@ -107,7 +107,7 @@ public class Alquiler {
         sb.append("Alquiler{");
         sb.append("idAlquiler=").append(idAlquiler);
         sb.append(", cliente=").append(cliente);
-        sb.append(", vehiculo=").append(vehiculo.getBastidor());
+        sb.append(", vehiculo=").append(vehiculo);
         sb.append(", fechaIncio=").append(fechaIncio);
         sb.append(", duracion=").append(duracion);
         sb.append('}');

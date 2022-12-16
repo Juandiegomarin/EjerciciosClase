@@ -49,7 +49,8 @@ public class Prueba {
             //margaritas posibles
             
             numeroMargaritas = Utilidades.filtrarNumeroEnteroSccanerRango(
-                NUMERO_MINIMO_MARGARITAS, NUMERO_MAXIMO_MARGARITAS);
+                NUMERO_MINIMO_MARGARITAS, NUMERO_MAXIMO_MARGARITAS,"¿Cuantas margaritas"
+                        + "vas a desenbainar?");
             
             
             //Bucle for para preguntar el número de pétalos y mostrar 

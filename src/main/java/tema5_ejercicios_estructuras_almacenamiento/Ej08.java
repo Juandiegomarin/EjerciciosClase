@@ -8,7 +8,7 @@ public class Ej08 {
 
     public static void main(String[] args) {
 
-        int[] listaNumeros = new int[utilidades.Utilidades.filtrarNumeroEnteroSccaner()];
+        int[] listaNumeros = new int[utilidades.Utilidades.filtrarNumeroEnteroSccaner("Introduce el numero")];
         System.out.println("Estos son los valores del array");
         for (int i = 0; i < listaNumeros.length; i++) {
             listaNumeros[i] = utilidades.Utilidades.numeroEnteroRandom(1, 5);

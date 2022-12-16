@@ -15,9 +15,9 @@ public enum VehiculoModelo {
     SEAT_PANDA("Seat", "Panda", "48"),
     FORD_KUGA("Ford", "Kuga", "120"),
     CUPRA("Seat", "Cupra", "140");
-    String marca;
-    String modelo;
-    String cilindrada;
+   private String marca;
+   private String modelo;
+   private String cilindrada;
 
     private VehiculoModelo(String marca, String modelo, String cilindrada) {
         this.marca = marca;
@@ -55,12 +55,12 @@ public enum VehiculoModelo {
         return "VehiculoModelo{" + "marca=" + marca + ", modelo=" + modelo + ", cilindrada=" + cilindrada + '}';
     }
 
-    public static VehiculoModelo modeloAleatorio() {
+    public static String modeloAleatorio() {
 
         VehiculoModelo[] modelos = VehiculoModelo.values();
         int posicion = utilidades.Utilidades.numeroEnteroRandom(0, modelos.length-1);
 
-        return modelos[posicion];
+        return modelos[posicion].getMarca()+" "+modelos[posicion].getModelo()+" "+modelos[posicion].getCilindrada();
 
     }
 

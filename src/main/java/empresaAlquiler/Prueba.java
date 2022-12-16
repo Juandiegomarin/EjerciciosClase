@@ -1,51 +1,170 @@
-
 package empresaAlquiler;
 
 import java.time.LocalDate;
-
+import java.time.Year;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Prueba {
 
-    
     public static void main(String[] args) {
-        
+        int opcion = 0;
+        Empresa e = new Empresa("Empresa clase");
 
-        Empresa e1= new Empresa("Empresa 1");
-        
+        System.out.println(e);
+        String bastidor="";
+        String nif="";
+        do {
+            opcion = filtrarOpcion();
 
-        Vehiculo v = e1.getVehiculos().buscarVehiculo("1");
-        Cliente c = e1.getClientes().buscarCliente("1");
-        
-        
-        Vehiculo v2 = e1.getVehiculos().buscarVehiculo("9");
-        Cliente c2 = e1.getClientes().buscarCliente("9");
-        System.out.println(e1);
-        e1.registrarAlquiler(LocalDate.now(), 8, c, v);
-        
-        
-        System.out.println(e1.getAlquileres());
-        
-        System.out.println("------------------");
-        System.out.println(e1.getVehiculos());
-        
-        System.out.println("+++++++++++++++++");
+            switch (opcion) {
+                case 1 -> {
+                    e.registrarClientePedidaDatos(crearCliente());
+                }
+                case 2 -> {
+                    e.registrarVehiculoPedidaDatos(crearVehiculo());
+                }
+                case 3 -> {
+                                            
+                       JOptionPane.showMessageDialog(null,
+                            "Estos son los clientes de tu empresa para elegir el cliente"
+                                    + "introduzca el nif correspondiente"
+                            +e.getClientes()); 
+                       
+                       JOptionPane.showMessageDialog(null,
+                            "Estos son vehiculos de tu empresa para elegir el vehiculo"
+                                    + "introduzca el bastridor correspondiente"
+                            +e.getVehiculos()); 
+                       
+                       e.registrarAlquilerIntroducir();
+                    
 
-        
-        
-        System.out.println(e1.buscarCliente("1"));
-        System.out.println(e1.buscarVehiculo("1"));
-        System.out.println("--------------------------------------");
-        e1.registrarCliente();
+                }
+                case 4 -> {
+                    JOptionPane.showMessageDialog(null, "Saliendo.....");
+                }
 
-        System.out.println(e1);
-        System.out.println("////////////////////////////////////////");
-        e1.registrarAlquiler(LocalDate.now(), 10, c2,v2);
-        System.out.println(e1.getAlquileres());
-        e1.recibirVehiculo(e1.getAlquileres().buscarAlquiler(1));
-        System.out.println(e1.getVehiculos());
-        
-        
-        
+            }
+
+        } while (opcion != 4);
+
+        System.out.println(e);
+
+    }
+
+    public static int filtrarOpcion() {
+
+        String menu = """
+                    Aplicación de nuestra empresa
+                    
+                    1- Dar de alta cliente
+                    2- Dar de alta vehiculo
+                    3- Registrar alquiler
+                    
+                    4- Salir de la aplicacion
+                    
+                    Para seleccionar la opcion deberá
+                    introducir el número correspondiente
+                    a la opción.
+                    """;
+
+        int numero = 0;
+        final int MIN = 1;
+        final int MAX = 4;
+        boolean seguir = true;
+        do {
+
+            try {
+                numero = Integer.parseInt(JOptionPane.showInputDialog(menu));
+                if (numero >= MIN && numero <= MAX) {
+                    seguir = false;
+                } else {
+                    JOptionPane.showMessageDialog(null, "La opción debe estar entre " + MIN + " y " + MAX);
+                }
+            } catch (NumberFormatException nfe) {
+                JOptionPane.showMessageDialog(null, "Ha introducido un valor incorrecto, repita");
+            }
+
+        } while (seguir);
+
+        return numero;
+
+    }
+
+    public static Cliente crearCliente() {
+
+        String nombre = "";
+        String apellido = "";
+        String nif;
+
+        JOptionPane.showMessageDialog(null, "Datos del cliente");
+
+        nombre = JOptionPane.showInputDialog("Nombre del cliente");
+        apellido = JOptionPane.showInputDialog("Apellido del cliente");
+        nif = JOptionPane.showInputDialog("Nif del cliente");
+
+        Cliente c = new Cliente(nombre, apellido, nif);
+
+        return c;
+
+    }
+
+    public static Vehiculo crearVehiculo() {
+
+        String bastidor = "";
+        String matricula = "";
+        String color = "";
+        String modelo = "";
+
+        JOptionPane.showMessageDialog(null, "Datos del Vehiculo");
+
+        bastidor = JOptionPane.showInputDialog("Bastidor del Vehiculo");
+
+        matricula = JOptionPane.showInputDialog("Matricula del vehiculo");
+
+        color = JOptionPane.showInputDialog("Color del vehiculo");
+
+        modelo = JOptionPane.showInputDialog("Modelo del vehiculo");
+
+        Vehiculo v = new Vehiculo(bastidor, matricula, color, modelo);
+
+        return v;
+
+    }
+
+    public static LocalDate crearFecha() {
+
+        int año = Utilidades.numeroEnteroRandom(LocalDate.now().getYear(), 2030);
+
+        int mes;
+
+        if (año == LocalDate.now().getYear()) {
+
+            mes = Utilidades.numeroEnteroRandom(LocalDate.now().getMonthValue(), 12);
+
+        } else {
+            mes = Utilidades.numeroEnteroRandom(1, 12);
+        }
+
+        int dia;
+
+        if (mes == 2 && Year.isLeap(año)) {
+            dia = Utilidades.numeroEnteroRandom(1, 29);
+        } else if (mes == 2) {
+
+            dia = Utilidades.numeroEnteroRandom(1, 28);
+
+        } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+
+            dia = Utilidades.numeroEnteroRandom(1, 30);
+
+        } else {
+            dia = Utilidades.numeroEnteroRandom(1, 31);
+        }
+
+        return LocalDate.of(dia, mes, año);
+
     }
     
 }

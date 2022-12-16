@@ -5,15 +5,30 @@ package empresaAlquiler;
 public enum ClienteNombre {
     
     
-    JUANDIEGO,ALVARO,NACHO,FERNANDO,SAMUEL,ALBERTO;
+    JUANDIEGO("Juan Diego"),
+    ALVARO("Alvaro"),
+    NACHO("Nacho"),
+    FERNANDO("Fernando"),
+    SAMUEL("Samuel"),
+    ALBERTO("Alberto");
+    
+    private String nombre;
+
+    private ClienteNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
     
     
-    public static ClienteNombre nombreAleatorio() {
+    public static String nombreAleatorio() {
 
         ClienteNombre[] nombres = ClienteNombre.values();
         int posicion = utilidades.Utilidades.numeroEnteroRandom(0, nombres.length-1);
 
-        return nombres[posicion];
+        return nombres[posicion].getNombre();
 
     }
     

@@ -6,14 +6,28 @@ public enum ClienteApellido {
     
     
     
-    MARIN,MARTINEZ,COLLADO,SALCEDO,JIMENEZ;
+    MARIN("Marin"),
+    MARTINEZ("Martinez"),
+    COLLADO("Collado"),
+    SALCEDO("Salcedo"),
+    JIMENEZ("Jimenez");
     
-    public static ClienteApellido apellidoAleatorio() {
+    private String apellido;
+
+    private ClienteApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+    
+    public static String apellidoAleatorio() {
 
         ClienteApellido[] apellidos = ClienteApellido.values();
         int posicion = utilidades.Utilidades.numeroEnteroRandom(0, apellidos.length-1);
 
-        return apellidos[posicion];
+        return apellidos[posicion].getApellido();
 
     }
     

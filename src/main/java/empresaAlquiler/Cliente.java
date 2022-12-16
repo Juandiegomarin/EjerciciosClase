@@ -5,8 +5,8 @@ import org.apache.commons.lang3.RandomStringUtils;
 
 public class Cliente {
 
-    private ClienteNombre nombre;
-    private ClienteApellido apellido;
+    private String nombre;
+    private String apellido;
     private String nif;
     private static int contador = 0;
 
@@ -16,21 +16,30 @@ public class Cliente {
         this.nif = String.valueOf(++contador);
     }
 
-    public ClienteNombre getNombre() {
+    public Cliente(String nombre, String apellido, String nif) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.nif = nif;
+    }
+
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(ClienteNombre nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public ClienteApellido getApellido() {
+    public String getApellido() {
         return apellido;
     }
 
-    public void setApellido(ClienteApellido apellido) {
+    public void setApellido(String apellido) {
         this.apellido = apellido;
     }
+    
+
+   
 
     public String getNif() {
         return nif;

@@ -22,8 +22,8 @@ public class ServicioPersona {
         
         nombre=utilidades.Utilidades.pedirString("Introduce el nombre de la persona");
         
-        System.out.println("Introduce la edad de la persona");
-        edad=utilidades.Utilidades.filtrarNumeroEnteroSccaner();
+        
+        edad=utilidades.Utilidades.filtrarNumeroEnteroSccaner("Introduce la edad de la persona");
         
         System.out.println("Introduce el sexo de la persona(Hombre/Mujer/Otro)");
         
@@ -34,11 +34,11 @@ public class ServicioPersona {
         
         sexo=sexoString.charAt(0);
         
-        System.out.println("Introduce el peso de la persona");
-        peso=utilidades.Utilidades.filtrarNumeroDecimalScanner();
         
-        System.out.println("Introduce la altura de la persona");
-        altura=utilidades.Utilidades.filtrarNumeroEnteroSccaner();
+        peso=utilidades.Utilidades.filtrarNumeroDecimalScanner("Introduce el peso de la persona");
+        
+        
+        altura=utilidades.Utilidades.filtrarNumeroEnteroSccaner("Introduce la altura de la persona");
     
          persona=new Persona(nombre, edad, sexo, peso, altura);
     

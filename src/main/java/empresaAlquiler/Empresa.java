@@ -1,7 +1,9 @@
 package empresaAlquiler;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.Objects;
+import javax.swing.JOptionPane;
 import org.apache.commons.lang3.RandomStringUtils;
 
 public class Empresa {
@@ -89,7 +91,7 @@ public class Empresa {
         return "Empresa{" + "cif=" + cif + ",\n nombre=" + nombre + ",\n vehiculos=" + vehiculos + ",\n clientes=" + clientes + ",\n alquileres=" + alquileres + '}';
     }
     
-    public void registrarAlquiler(LocalDate fechaAlq,int duracion,Cliente c, Vehiculo v){
+    public void registrarAlquiler(Cliente c,Vehiculo v,LocalDate fechaAlq,int duracion){
         
         if(this.clientes.buscarCliente(c.getNif())!=null&&this.vehiculos.buscarVehiculo(v.getBastidor())!=null){
         if(v.isDisponible()){
@@ -102,30 +104,82 @@ public class Empresa {
     
     }
     
-    public void recibirVehiculo(Alquiler a){
-    
-    a.getVehiculo().setDisponible(true);
-    }
 
-    public void registrarCliente() {
+    public void registrarClienteAutomatico() {
 
         this.clientes.añadirCliente(new Cliente());
 
     }
-
-    public void registrarVehiculo() {
+    public void registrarClientePedidaDatos(Cliente c){
+    
+    this.clientes.añadirCliente(c);
+    
+    }
+    
+    
+    
+    public void registrarVehiculoAutomatico() {
 
         this.vehiculos.añadirVehiculo(new Vehiculo());
 
+    }
+    public void registrarVehiculoPedidaDatos(Vehiculo v) {
+
+        this.vehiculos.añadirVehiculo(v);
+
+    }
+    
+    
+    
+    public void recibirVehiculo(Alquiler a){
+    
+        
+    a.getVehiculo().setDisponible(true);
     }
 
     public Cliente buscarCliente(String nif) {
 
         return this.clientes.buscarCliente(nif);
     }
-
     public Vehiculo buscarVehiculo(String bastidor) {
 
         return this.vehiculos.buscarVehiculo(bastidor);
     }
+    
+    
+    
+    
+    
+    public void registrarAlquilerIntroducir(){
+        
+        Alquiler a= pedirDatosAlquiler();
+        if(this.clientes.buscarCliente(a.getCliente().getNif())!=null&&this.vehiculos.buscarVehiculo(a.getVehiculo().getBastidor())!=null){
+        if(a.getVehiculo().isDisponible()){
+            a.getVehiculo().setDisponible(false);
+           
+            this.alquileres.añadirAlquiler(a);
+        }
+        }
+        
+    
+    }
+    public Alquiler pedirDatosAlquiler(){
+    
+    
+    String nif="";
+    String bastidor="";
+    int duracion=0;
+    
+    nif=JOptionPane.showInputDialog("Introduce el nif del cliente que alquila");
+    bastidor=JOptionPane.showInputDialog("Introduce el bastidor del coche a alquilar");
+    duracion=Utilidades.filtrarNumeroEnteroJOptionPane("Indica la duración del alquiler");
+    return new Alquiler(clientes.buscarCliente(nif), vehiculos.buscarVehiculo(bastidor), LocalDate.now(),duracion);
+    
+    
+    }
+
+    
+    
+    
+    
 }

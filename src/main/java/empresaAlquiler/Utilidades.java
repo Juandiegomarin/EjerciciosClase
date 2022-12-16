@@ -1,5 +1,6 @@
-package utilidades;
+package empresaAlquiler;
 
+import utilidades.*;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
@@ -7,7 +8,7 @@ import javax.swing.JOptionPane;
 
 public class Utilidades {
 
-    public static int filtrarNumeroEnteroSccaner(String msj) {
+    public static int filtrarNumeroEnteroSccaner() {
 
         Scanner entrada = new Scanner(System.in);
 
@@ -15,7 +16,7 @@ public class Utilidades {
         boolean seguir = true;
         do {
 
-            System.out.println(msj);
+            System.out.println("Introduce el número");
 
             try {
                 numero = entrada.nextInt();
@@ -30,7 +31,7 @@ public class Utilidades {
         return numero;
     }
 
-    public static int filtrarNumeroEnteroSccanerRango(int minimo, int maximo,String msj) {
+    public static int filtrarNumeroEnteroSccanerRango(int minimo, int maximo) {
 
         Scanner entrada = new Scanner(System.in);
 
@@ -38,7 +39,7 @@ public class Utilidades {
         boolean seguir = true;
         do {
 
-            System.out.println(msj);
+            System.out.println("Introduce el número");
 
             try {
                 numero = entrada.nextInt();
@@ -75,13 +76,13 @@ public class Utilidades {
         return numero;
     }
 
-    public static int filtrarNumeroEnteroJOptionPaneRango(int minimo, int maximo,String msj) {
+    public static int filtrarNumeroEnteroJOptionPaneRango(int minimo, int maximo) {
 
         int numero = 0;
         boolean seguir = true;
         do {
             try {
-                numero = Integer.parseInt(JOptionPane.showInputDialog(msj));
+                numero = Integer.parseInt(JOptionPane.showInputDialog("Introduce el número"));
                 if (numero >= minimo && numero <= maximo) {
                     seguir = false;
                 } else {
@@ -97,7 +98,7 @@ public class Utilidades {
     
     
     
-    public static double filtrarNumeroDecimalScanner(String msj) {
+    public static double filtrarNumeroDecimalScanner() {
 
         Scanner entrada = new Scanner(System.in);
 
@@ -105,7 +106,7 @@ public class Utilidades {
         boolean seguir = true;
         do {
 
-            System.out.println(msj);
+            System.out.println("Introduce el número");
 
             try {
                 numero = entrada.nextDouble();
@@ -121,7 +122,7 @@ public class Utilidades {
 
     }
 
-    public static double filtrarNumeroDecimalSccanerRango(double minimo, double maximo,String msj) {
+    public static double filtrarNumeroDecimalSccanerRango(double minimo, double maximo) {
 
         Scanner entrada = new Scanner(System.in);
 
@@ -129,7 +130,7 @@ public class Utilidades {
         boolean seguir = true;
         do {
 
-            System.out.println(msj);
+            System.out.println("Introduce el número");
 
             try {
                 numero = entrada.nextDouble();
@@ -148,14 +149,14 @@ public class Utilidades {
         return numero;
     }
 
-    public static double filtrarNumeroDecimalJOptionPane(String msj) {
+    public static double filtrarNumeroDecimalJOptionPane() {
 
         double numero = 0;
         boolean seguir = true;
         do {
 
             try {
-                numero = Double.parseDouble(JOptionPane.showInputDialog(msj));
+                numero = Double.parseDouble(JOptionPane.showInputDialog("Introduce el número"));
                 seguir = false;
             } catch (NumberFormatException nfe) {
                 JOptionPane.showMessageDialog(null, "Ha introducido un valor incorrecto, repita");
@@ -166,13 +167,13 @@ public class Utilidades {
         return numero;
     }
 
-    public static double filtrarNumeroDecimalJOptionPaneRango(double minimo, double maximo,String msj) {
+    public static double filtrarNumeroDecimalJOptionPaneRango(double minimo, double maximo) {
 
         double numero = 0;
         boolean seguir = true;
         do {
             try {
-                numero = Double.parseDouble(JOptionPane.showInputDialog(msj));
+                numero = Double.parseDouble(JOptionPane.showInputDialog("Introduce el número"));
                 if (numero >= minimo && numero <= maximo) {
                     seguir = false;
                 } else {
