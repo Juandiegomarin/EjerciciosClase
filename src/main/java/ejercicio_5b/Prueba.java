@@ -23,8 +23,7 @@ public class Prueba {
         Empresa e = new Empresa("Empresa clase");
 
         System.out.println(e);
-        String bastidor = "";
-        String nif = "";
+        
         do {
             opcion = filtrarOpcion();
 

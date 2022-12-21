@@ -97,7 +97,7 @@ public class Empresa {
         if(v.isDisponible()){
             v.setDisponible(false);
             Alquiler a = new Alquiler(c, v, fechaAlq, duracion);
-            this.alquileres.añadirAlquiler(a);
+            this.alquileres.anadirElemento(a);
         }
         }
         
@@ -107,12 +107,12 @@ public class Empresa {
 
     public void registrarClienteAutomatico() {
 
-        this.clientes.añadirCliente(new Cliente());
+        this.clientes.anadirElemento(new Cliente());
 
     }
     public void registrarClientePedidaDatos(Cliente c){
     
-    this.clientes.añadirCliente(c);
+    this.clientes.anadirElemento(c);
     
     }
     
@@ -120,12 +120,12 @@ public class Empresa {
     
     public void registrarVehiculoAutomatico() {
 
-        this.vehiculos.añadirVehiculo(new Vehiculo());
+        this.vehiculos.anadirElemento(new Vehiculo());
 
     }
     public void registrarVehiculoPedidaDatos(Vehiculo v) {
 
-        this.vehiculos.añadirVehiculo(v);
+        this.vehiculos.anadirElemento(v);
 
     }
     
@@ -157,7 +157,7 @@ public class Empresa {
         if(a.getVehiculo().isDisponible()){
             a.getVehiculo().setDisponible(false);
            
-            this.alquileres.añadirAlquiler(a);
+            this.alquileres.anadirElemento(a);
         }
         }
         
@@ -171,14 +171,14 @@ public class Empresa {
     int duracion=0;
     
     JOptionPane.showMessageDialog(null,
-                            "Estos son los clientes de tu empresa para elegir el cliente"
+                            "Estos son los clientes de tu empresa para elegir el cliente "
                                     + "introduzca el nif correspondiente"
                             +getClientes()); 
     nif=JOptionPane.showInputDialog("Introduce el nif del cliente que alquila");
     
     
     JOptionPane.showMessageDialog(null,
-                            "Estos son vehiculos de tu empresa para elegir el vehiculo"
+                            "Estos son vehiculos de tu empresa para elegir el vehiculo "
                                     + "introduzca el bastridor correspondiente"
                             +getVehiculos());
     
