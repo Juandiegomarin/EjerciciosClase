@@ -41,7 +41,7 @@ public class Catalogo<T> {
         if (t != null) {
             for (int i = 0; i < lista.size(); i++) {
                 //CAMBIOS PARA QUE NO COJA NULLS
-                if (t.equals(this.lista.get(i) != null && t.equals(this.lista.get(i)))) {
+                if (this.lista.get(i)!= null && t.equals(this.lista.get(i))) {
                     return i;
                 }
             }
