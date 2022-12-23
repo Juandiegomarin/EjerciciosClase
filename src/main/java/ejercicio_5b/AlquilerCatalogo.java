@@ -59,5 +59,32 @@ public class AlquilerCatalogo extends Catalogo<Alquiler>{
         return (posicion >= 0) ? this.lista.get(posicion) : null;
         
     }
+    
+    public boolean buscarCliente(String nif){
+        boolean comprobar=false;
+        for (int i = 0; i < lista.size(); i++) {
+            
+            if(lista.get(i).getCliente().getNif().equals(nif)){
+            comprobar=true;
+            
+            }
+        }
+    return comprobar;
+    }
+    public boolean buscarVehiculo(String bastidor){
+    
+        boolean comprobar=false;
+        for (int i = 0; i < lista.size(); i++) {
+            
+            if(lista.get(i).getVehiculo().getBastidor().equals(bastidor)){
+            comprobar=true;
+            
+            }
+        }
+    return comprobar;
+    
+    
+    
+    }
 
 }

@@ -103,15 +103,9 @@ public class Alquiler {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Alquiler{");
-        sb.append("idAlquiler=").append(idAlquiler);
-        sb.append(", cliente=").append(cliente);
-        sb.append(", vehiculo=").append(vehiculo);
-        sb.append(", fechaIncio=").append(fechaIncio);
-        sb.append(", duracion=").append(duracion);
-        sb.append('}');
-        return sb.toString();
+        return "Alquiler{" + "idAlquiler=" + idAlquiler + ", cliente=" + cliente.getNif() + ", vehiculo=" + vehiculo.getBastidor() + ", fechaIncio=" + fechaIncio + ", duracion=" + duracion + '}';
     }
+
+    
 
 }
