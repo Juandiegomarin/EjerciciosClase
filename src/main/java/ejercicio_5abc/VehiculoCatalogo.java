@@ -1,4 +1,4 @@
-package ejercicio_5b;
+package ejercicio_5abc;
 
 public class VehiculoCatalogo extends Catalogo<Vehiculo> {
 

@@ -1,4 +1,4 @@
-package ejercicio_5b;
+package ejercicio_5abc;
 
 public class ClienteCatalogo extends Catalogo<Cliente> {
 
