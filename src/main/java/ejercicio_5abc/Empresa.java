@@ -185,7 +185,7 @@ public class Empresa {
 
     public void borrarVehiculoSinAlquiler(String bastidor) {
 
-        boolean b=alquileres.buscarCliente(bastidor);
+        boolean b=alquileres.buscarVehiculo(bastidor);
         
         if(!b){vehiculos.borrarElemento(buscarVehiculo(bastidor));}
 
