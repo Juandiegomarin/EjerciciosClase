@@ -41,8 +41,10 @@ public class Avion {
                     JOptionPane.showMessageDialog(null, imprimirMatriz(avion));
                 }
                 case 2 -> {
+                    ocuparAsiento(avion);
                 }
                 case 3 -> {
+                    anularAsiento(avion);
                 }
                 case 4 -> {
                     JOptionPane.showMessageDialog(null, "Saliendo");
@@ -84,28 +86,46 @@ public class Avion {
 
     public static void ocuparAsiento(String[][] mat) {
 
-        Scanner entrada = new Scanner(System.in);
+        
         int fila = 0;
         int columna = 0;
 
-        imprimirMatriz(mat);
-
-        System.out.println("Introduce la fila y columna en la que sentarse");
-
-        System.out.println("Fila");
-        fila = entrada.nextInt();
-        System.out.println("Columna");
-        columna = entrada.nextInt();
+        fila= utilidades.Utilidades.filtrarNumeroEnteroJOptionPaneRango(1, 25, "Introduce la fila del asiento");
+        columna= utilidades.Utilidades.filtrarNumeroEnteroJOptionPaneRango(1, 4, "Introduce la columna del asiento");
 
         fila -= 1;
         columna -= 1;
 
         if (mat[fila][columna].equals("X")) {
 
-            System.out.println("Ese asiento esta ya ocupado");
+            JOptionPane.showMessageDialog(null, "Ese asiento ya esta ocupado");
         } else {
             mat[fila][columna] = "X";
         }
 
+    }
+    
+    public static void anularAsiento(String[][] mat){
+    
+     int fila = 0;
+        int columna = 0;
+
+        fila= utilidades.Utilidades.filtrarNumeroEnteroJOptionPaneRango(1, 25, "Introduce la fila del asiento");
+        columna= utilidades.Utilidades.filtrarNumeroEnteroJOptionPaneRango(1, 4, "Introduce la columna del asiento");
+
+        fila -= 1;
+        columna -= 1;
+
+        if (mat[fila][columna].equals("O")) {
+
+            JOptionPane.showMessageDialog(null, "Ese asiento ya esta libre");
+        } else {
+            mat[fila][columna] = "O";
+        }
+    
+    
+    
+    
+    
     }
 }
