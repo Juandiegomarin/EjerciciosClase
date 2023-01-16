@@ -1,19 +1,19 @@
-package tema5_ejercicios_estructuras_almacenamiento;
+package ejercicio_5e;
 
 import javax.swing.JOptionPane;
 
-public class Arbol {
+public class Arbolito {
 
     public static void main(String[] args) {
 
         int altura;
-        final int ALTURA_MINIMA = 2;
-        final int ALTURA_MAXIMA = 10;
-        final int ANCHURA_MINIMA = 3;
-        final int TRONCO = 2;
-        altura = utilidades.Utilidades.filtrarNumeroEnteroJOptionPaneRango(ALTURA_MINIMA, ALTURA_MAXIMA, "Indica la altura del arbol");
+        
+        String [][]arbol;
+        
+        
+        altura = utilidades.Utilidades.filtrarNumeroEnteroJOptionPaneRango(2, 10, "Indica la altura del arbol");
 
-        String[][] arbol = new String[altura + TRONCO][ANCHURA_MINIMA + ((altura - ALTURA_MINIMA) * 2)];
+        arbol=crearMatrizArbol(altura);
         rellenarArbol(arbol);
         System.out.println(imprimirArbol(arbol));
     }
@@ -31,7 +31,7 @@ public class Arbol {
                 
                 
                 if (aux >= 0) {
-                    arbol[i][aux + j] = "*";
+                    arbol[i][aux + j] = "1";
                 }
                 
                 if (j + aux == arbol[i].length - 1 - aux) {
@@ -42,7 +42,7 @@ public class Arbol {
             
             if (i == arbol.length - 2 || i == arbol.length - 1) {
 
-                arbol[i][(arbol[i].length / 2)] = "*";
+                arbol[i][(arbol[i].length / 2)] = "1";
 
             }
 
@@ -67,6 +67,22 @@ public class Arbol {
 
         return tree;
 
+    }
+    
+    public static String[][] crearMatrizArbol(int alturaArbol){
+    
+   
+        final int ALTURA_MINIMA = 2;
+        final int ALTURA_MAXIMA = 10;
+        final int ANCHURA_MINIMA = 3;
+        final int TRONCO = 2;
+    String [][] aux;
+    
+    aux = new String[alturaArbol + TRONCO][ANCHURA_MINIMA + ((alturaArbol - ALTURA_MINIMA) * 2)];
+    
+    
+    return aux;
+    
     }
 
 }
