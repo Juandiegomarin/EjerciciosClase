@@ -1,29 +1,34 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package ejercicio_5f;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
-import java.util.SortedMap;
+import java.util.TreeSet;
 
-public class Ejercito {
-
+/**
+ *
+ * @author juand
+ */
+public class EjercitoOrdenado {
+    
     private Set<Soldado> ejercito;
 
-    public Ejercito() {
-        this.ejercito = new HashSet<>();
-    }
-
-    public void setEjercito(Set<Soldado> ejercito) {
-        this.ejercito = ejercito;
+    public EjercitoOrdenado() {
+        this.ejercito = new TreeSet<>();
     }
 
     public Set<Soldado> getEjercito() {
         return ejercito;
     }
-    
 
+    public void setEjercito(Set<Soldado> ejercito) {
+        this.ejercito = ejercito;
+    }
+    
     public int miembrosEjercito() {
 
         return ejercito.size();
@@ -72,5 +77,4 @@ public class Ejercito {
     }
     
     
-
 }
