@@ -18,7 +18,7 @@ public class MainEjercitoOrdenado {
      */
     public static void main(String[] args) {
        
-        Ejercito ejercito= new Ejercito();
+        EjercitoOrdenado ejercito= new EjercitoOrdenado();
         ArrayList<Soldado> soldados= new ArrayList<>();
         Soldado s1= new Soldado("A", "A", "A", 0);
         Soldado s2= new Soldado("B", "B", "B", 0);

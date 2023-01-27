@@ -1,12 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package ejercicio_5f;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Set;
+import java.util.SortedSet;
 import java.util.TreeSet;
 
 /**
@@ -15,7 +13,7 @@ import java.util.TreeSet;
  */
 public class EjercitoOrdenado {
     
-    private Set<Soldado> ejercito;
+    private SortedSet<Soldado> ejercito;
 
     public EjercitoOrdenado() {
         this.ejercito = new TreeSet<>();
@@ -25,7 +23,7 @@ public class EjercitoOrdenado {
         return ejercito;
     }
 
-    public void setEjercito(Set<Soldado> ejercito) {
+    public void setEjercito(SortedSet<Soldado> ejercito) {
         this.ejercito = ejercito;
     }
     

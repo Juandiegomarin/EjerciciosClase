@@ -45,6 +45,10 @@ public class MainEjercito {
         
         
         
+        
+        
+        
+        
         System.out.println("Miembros:");
         System.out.println(ejercito.miembrosEjercito());
         
@@ -58,7 +62,7 @@ public class MainEjercito {
         
         System.out.println("¿Esta en el ejercito el soldado con nif 12?");
         System.out.println(ejercito.estaSoldado(12));
-        
+        System.out.println("---------------------------");
         soldados= ejercito.guardarArrayList();
         
         for (Soldado soldado : soldados) {
