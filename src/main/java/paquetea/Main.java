@@ -68,6 +68,16 @@ public class Main {
         
         palabras.imprimirPalabras();
         
+        
+        System.out.println("------------------------");
+        System.out.println("Traduccion de la palabra door");
+        System.out.println( palabras.traduccion("Door"));
+        
+        System.out.println("");
+        palabras.modificarPalabra("Shoe", "Maria");
+        System.out.println("");
+        palabras.imprimirPalabras();
+        
     }
     
 }

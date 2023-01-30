@@ -73,5 +73,24 @@ public class Traductor{
     palabras.remove(key);
     
     }
+    
+    public void modificarPalabra(String key,String modificacion){
+    
+    
+        palabras.remove(key);
+        palabras.put(key, modificacion);
+    
+    
+    }
+    
+    public String traduccion(String key){
+    
+        
+    
+    
+    return palabras.get(key);
+    
+    
+    }
 
 }
