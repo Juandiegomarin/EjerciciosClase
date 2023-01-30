@@ -38,7 +38,7 @@ public class EjercitoOrdenado {
         ejercito.add(s);
 
     }
-
+    
     public boolean estaVacio() {
 
         return ejercito.size() == 0;
