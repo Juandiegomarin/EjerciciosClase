@@ -4,17 +4,17 @@ package paqueteb;
 
 public class Premio {
     
-    private double precio;
+    private int precio;
 
     public Premio() {
-        this.precio = Math.random()*100_000;
+        this.precio =(int) Math.random()*100_000;
     }
 
     public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
 

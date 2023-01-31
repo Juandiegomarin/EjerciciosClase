@@ -13,19 +13,19 @@ import java.util.TreeMap;
  */
 public class ListaDePremios {
 
-    private SortedMap<Numero, Premio> lista;
+    private SortedMap<String, Double> lista;
 
     public ListaDePremios() {
         this.lista = new TreeMap<>();
 
         for (int i = 0; i < 10; i++) {
 
-            lista.put(new Numero(), new Premio());
+            lista.put(new Numero().getNumero(), new Premio().getPrecio());
         }
 
     }
 
-    public SortedMap<Numero, Premio> getLista() {
+    public SortedMap<String, Double> getLista() {
         return lista;
     }
     
@@ -35,13 +35,13 @@ public class ListaDePremios {
     
     
     
-    return lista.get(key).getPrecio();
+    return lista.get(key);
     }
     
     public void imprimirLista(){
     
-        for (Numero key : lista.keySet()) {
-            System.out.printf("Key %s -- Value %s %n",key.getNumero() , lista.get(key).getPrecio());
+        for (String key : lista.keySet()) {
+            System.out.printf("Key %s -- Value %s %n",key , lista.get(key));
         }
     
     
