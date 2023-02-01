@@ -1,13 +1,13 @@
 
-package paqueteb;
+package ejercicio_5g;
 
 
-public class Main {
+public class PaqueteBMain {
 
     
     public static void main(String[] args) {
         
-        ListaDePremios listaPremios= new ListaDePremios();
+        PaqueteBListaDePremios listaPremios= new PaqueteBListaDePremios();
         
         
        listaPremios.imprimirLista();

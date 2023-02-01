@@ -1,12 +1,12 @@
 
-package paqueteb;
+package ejercicio_5g;
 
 
-public class Premio {
+public class PaqueteBPremio {
     
     private int precio;
 
-    public Premio() {
+    public PaqueteBPremio() {
         this.precio =utilidades.Utilidades.numeroEnteroRandom(0, 1000);
     }
 
@@ -36,7 +36,7 @@ public class Premio {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Premio other = (Premio) obj;
+        final PaqueteBPremio other = (PaqueteBPremio) obj;
         return Double.doubleToLongBits(this.precio) == Double.doubleToLongBits(other.precio);
     }
 
