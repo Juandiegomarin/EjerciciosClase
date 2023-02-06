@@ -67,7 +67,7 @@ public class Pila<T> {
     }
 
     public void desapilarElemento() {
-
+        if(!estaVacia()){
         for (int i = pila.size()-1; i >0; i--) {
             
             
@@ -76,7 +76,7 @@ public class Pila<T> {
                 break;
             
         }
-
+        }
     }
 
     public boolean estaVacia() {
@@ -123,7 +123,7 @@ public class Pila<T> {
 
     public void rellenarPila(T[] lista) {
 
-        pila.removeAll(pila);
+        pila.clear();
 
         this.tamanio = lista.length;
 
