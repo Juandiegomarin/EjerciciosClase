@@ -18,6 +18,10 @@ public class Calendario {
         this.matriz = new int[6][7];
         this.mes = mes;
         this.anio = anio;
+        
+        rellenaMatriz(obtenerPrimerDia(), obtenerDiasMes(), matriz);
+        
+        
     }
 
     public int[][] getMatriz() {
@@ -86,10 +90,10 @@ public class Calendario {
 
     }
 
-    public int[][] rellenaMatriz(int primerDia, int numeroDiasMes) {
+    private static void rellenaMatriz(int primerDia, int numeroDiasMes,int[][]matriz) {
 
         int numero = 1;
-        int[][]matriz=new int[6][7];
+        
         boolean seguir;
 
         for (int i = 0; i < matriz.length; i++) {
@@ -113,7 +117,7 @@ public class Calendario {
             }
 
         }
-        return matriz;
+        
     }
 
     public static String imprimirMatriz(int[][] matriz) {
@@ -158,7 +162,7 @@ public class Calendario {
     
     }
     
-    public static ArrayList<Calendario> calendarioAnual(int anio){
+    public ArrayList<Calendario> calendarioAnual(int anio){
     
     ArrayList<Calendario> calendarios= new ArrayList();
     
