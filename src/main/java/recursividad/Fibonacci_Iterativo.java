@@ -20,22 +20,30 @@ public class Fibonacci_Iterativo {
 
         System.out.println("Numero");
         numero = entrada.nextInt();
-
-        for (int i = 0; i < numero; i++) {
+        
+        int[]fibo=new int[numero+1];
+        fibo[0]=0;
+        for (int i = 1; i < numero+1; i++) {
 
             if (numero == 0) {
 
                 resultado = 0;
+                
                 break;
             } else {
+                
                 resultado = aux0 + aux1;
+                fibo[i]=resultado;
                 aux1 = aux0;
                 aux0 = resultado;
             }
 
         }
 
-        System.out.println(resultado);
+        for (int i = 0; i < fibo.length; i++) {
+            System.out.println(fibo[i]);
+            
+        }
     }
 
 }
