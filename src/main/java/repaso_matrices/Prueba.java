@@ -48,7 +48,7 @@ public class Prueba {
                 
                 pasajeros+=m[i][j];
                 }
-                if(m[i][j]!=0){
+                if(m[i][j]!=0&&j>0){
                 contador++;
                 }
                 
