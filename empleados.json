@@ -1,0 +1,181 @@
+[ {
+  "nombre" : " Laura",
+  "apellidos" : "Cárdenas Díaz",
+  "dni" : "26800485B",
+  "puesto" : "Educación Física P.E.S.",
+  "fechaIni" : [ 2010, 9, 1 ],
+  "fechaCese" : null,
+  "telefono" : "617704193",
+  "evaluador" : "Sí",
+  "coordinador" : "No"
+}, {
+  "nombre" : " Francisco Javier",
+  "apellidos" : "Díaz Puerto",
+  "dni" : "50602307F",
+  "puesto" : "Filosofía P.E.S.",
+  "fechaIni" : [ 2012, 9, 1 ],
+  "fechaCese" : null,
+  "telefono" : "655526696",
+  "evaluador" : "Sí",
+  "coordinador" : "No"
+}, {
+  "nombre" : " Julen",
+  "apellidos" : "Domínguez Tamayo",
+  "dni" : "03888739Z",
+  "puesto" : "Inglés P.E.S.",
+  "fechaIni" : [ 2012, 9, 1 ],
+  "fechaCese" : null,
+  "telefono" : "951249955",
+  "evaluador" : "Sí",
+  "coordinador" : "No"
+}, {
+  "nombre" : " Emilia",
+  "apellidos" : "Fagundo García",
+  "dni" : "12731426Y",
+  "puesto" : "Tecnología P.E.S.",
+  "fechaIni" : [ 2012, 9, 1 ],
+  "fechaCese" : null,
+  "telefono" : "689100483",
+  "evaluador" : "Sí",
+  "coordinador" : "No"
+}, {
+  "nombre" : " Rodrigo",
+  "apellidos" : "Fernández Luzón",
+  "dni" : "74663933E",
+  "puesto" : "Informática P.E.S.",
+  "fechaIni" : [ 2010, 9, 1 ],
+  "fechaCese" : null,
+  "telefono" : "717121280",
+  "evaluador" : "Sí",
+  "coordinador" : "Sí"
+}, {
+  "nombre" : " Pastora",
+  "apellidos" : "Fortea Molina",
+  "dni" : "77455412Z",
+  "puesto" : "Francés P.E.S.",
+  "fechaIni" : [ 2009, 9, 1 ],
+  "fechaCese" : null,
+  "telefono" : "656491528",
+  "evaluador" : "Sí",
+  "coordinador" : "Sí"
+}, {
+  "nombre" : " Cristina",
+  "apellidos" : "Garrocho González",
+  "dni" : "33397284L",
+  "puesto" : "Matemáticas P.E.S.",
+  "fechaIni" : [ 2011, 9, 1 ],
+  "fechaCese" : null,
+  "telefono" : "",
+  "evaluador" : "Sí",
+  "coordinador" : "No"
+}, {
+  "nombre" : " María",
+  "apellidos" : "Giráldez Cuevas",
+  "dni" : "07986998H",
+  "puesto" : "Física y Química P.E.S.",
+  "fechaIni" : [ 2012, 9, 1 ],
+  "fechaCese" : null,
+  "telefono" : "636443041",
+  "evaluador" : "Sí",
+  "coordinador" : "No"
+}, {
+  "nombre" : " Remedios",
+  "apellidos" : "Hernández Lozano",
+  "dni" : "26485849S",
+  "puesto" : "Inglés P.E.S.",
+  "fechaIni" : [ 2008, 9, 1 ],
+  "fechaCese" : null,
+  "telefono" : "952807303",
+  "evaluador" : "Sí",
+  "coordinador" : "No"
+}, {
+  "nombre" : " Ana",
+  "apellidos" : "Lirola Oliva",
+  "dni" : "74868422H",
+  "puesto" : "Lengua Castellana y Literatura P.E.S.",
+  "fechaIni" : [ 2008, 9, 1 ],
+  "fechaCese" : null,
+  "telefono" : "665475984",
+  "evaluador" : "Sí",
+  "coordinador" : "No"
+}, {
+  "nombre" : " Magdalena",
+  "apellidos" : "Macías Laynez",
+  "dni" : "25583669X",
+  "puesto" : "Matemáticas P.E.S.",
+  "fechaIni" : [ 2010, 9, 1 ],
+  "fechaCese" : null,
+  "telefono" : "951965362",
+  "evaluador" : "Sí",
+  "coordinador" : "Sí"
+}, {
+  "nombre" : " Jacqueline Cristina",
+  "apellidos" : "Márquez Pineda",
+  "dni" : "74867075M",
+  "puesto" : "Orientación Educativa P.E.S.",
+  "fechaIni" : [ 2008, 9, 1 ],
+  "fechaCese" : null,
+  "telefono" : "952340738",
+  "evaluador" : "Sí",
+  "coordinador" : "No"
+}, {
+  "nombre" : " Inés",
+  "apellidos" : "Martínez Fernández",
+  "dni" : "53682231R",
+  "puesto" : "Inglés P.E.S.",
+  "fechaIni" : [ 2009, 9, 1 ],
+  "fechaCese" : null,
+  "telefono" : "952805153",
+  "evaluador" : "Sí",
+  "coordinador" : "No"
+}, {
+  "nombre" : " Margarita",
+  "apellidos" : "Núñez Murillo",
+  "dni" : "75111043N",
+  "puesto" : "Sistemas y Aplic. Informáticos P.T.F.P.",
+  "fechaIni" : [ 2012, 9, 1 ],
+  "fechaCese" : null,
+  "telefono" : "699987772",
+  "evaluador" : "Sí",
+  "coordinador" : "Sí"
+}, {
+  "nombre" : " Rocío",
+  "apellidos" : "Rodríguez Montero",
+  "dni" : "74816539T",
+  "puesto" : "Lengua Castellana y Literatura P.E.S.",
+  "fechaIni" : [ 2010, 9, 1 ],
+  "fechaCese" : null,
+  "telefono" : "952890188",
+  "evaluador" : "Sí",
+  "coordinador" : "No"
+}, {
+  "nombre" : " Ana María",
+  "apellidos" : "Serena León",
+  "dni" : "26012958G",
+  "puesto" : "Educación Física P.E.S.",
+  "fechaIni" : [ 2010, 9, 1 ],
+  "fechaCese" : null,
+  "telefono" : "639675154",
+  "evaluador" : "Sí",
+  "coordinador" : "No"
+}, {
+  "nombre" : " Antonia",
+  "apellidos" : "Torres Silva",
+  "dni" : "08929037T",
+  "puesto" : "Sistemas y Aplic. Informáticos P.T.F.P.",
+  "fechaIni" : [ 2008, 9, 1 ],
+  "fechaCese" : null,
+  "telefono" : "654167765",
+  "evaluador" : "Sí",
+  "coordinador" : "Sí"
+}, {
+  "nombre" : " María Nieves",
+  "apellidos" : "Vidal Morillas",
+  "dni" : "27347116R",
+  "puesto" : "Física y Química P.E.S.",
+  "fechaIni" : [ 2012, 9, 1 ],
+  "fechaCese" : null,
+  "telefono" : "605837861",
+  "evaluador" : "Sí",
+  "coordinador" : "No"
+} ]

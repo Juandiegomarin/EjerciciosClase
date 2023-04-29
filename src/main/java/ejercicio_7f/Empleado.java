@@ -12,8 +12,8 @@ public class Empleado {
     private String apellidos;
     private String dni;
     private String puesto;
-    private String fechaIni;
-    private String fechaCese;
+    private LocalDate fechaIni;
+    private LocalDate fechaCese;
     private String telefono;
     private String evaluador;
     private String coordinador;
@@ -22,7 +22,7 @@ public class Empleado {
         
     }
 
-    public Empleado(String nombre, String apellidos, String dni, String puesto, String fechaIni, String fechaCese, String telefono, String evaluador, String coordinador) {
+    public Empleado(String nombre, String apellidos, String dni, String puesto, LocalDate fechaIni, LocalDate fechaCese, String telefono, String evaluador, String coordinador) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.dni = dni;
@@ -70,19 +70,19 @@ public class Empleado {
         this.puesto = puesto;
     }
 
-    public String getFechaIni() {
+    public LocalDate getFechaIni() {
         return fechaIni;
     }
 
-    public void setFechaIni(String fechaIni) {
+    public void setFechaIni(LocalDate fechaIni) {
         this.fechaIni = fechaIni;
     }
 
-    public String getFechaCese() {
+    public LocalDate getFechaCese() {
         return fechaCese;
     }
 
-    public void setFechaCese(String fechaCese) {
+    public void setFechaCese(LocalDate fechaCese) {
         this.fechaCese = fechaCese;
     }
 
