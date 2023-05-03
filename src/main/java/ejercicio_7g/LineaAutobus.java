@@ -53,9 +53,19 @@ public class LineaAutobus {
                 a.setLinea(tokens[0]);
                 a.setOrigen(ciudades[0]);
                 a.setDestino(ciudades[1]);
-                LocalTime[]fechas=new LocalTime[tokens[2].split(" ").length];
+                
+                String []horarios=tokens[2].split(" ");
+                
+                
+                
+                LocalTime[]fechas=new LocalTime[horarios.length];
+                
+                for (int i = 0; i < horarios.length; i++) {
+                    fechas[i]=LocalTime.parse(horarios[i]);
+                }
                 
                 a.setHoras(fechas);
+                
                 
                 autobuses.add(a);
                 

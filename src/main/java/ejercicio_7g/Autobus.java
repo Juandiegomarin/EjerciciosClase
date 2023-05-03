@@ -64,11 +64,26 @@ public class Autobus {
 
     @Override
     public String toString() {
-        return "Autobus{" + "linea=" + linea + ", origen=" + origen + ", destino=" + destino + ", horas=" + horas + '}';
+        return "Autobus{" + "linea=" + linea + ", origen=" + origen + ", destino=" + destino + ", horas={" + mostrarHoras() + '}';
     }
 
     
-
+    private  String mostrarHoras(){
+    
+    String hora ="";
+    
+        for (int i = 0; i < horas.length; i++) {
+            
+            hora+=horas[i]+" ";
+        }
+    
+    
+    
+    
+    
+    return hora;
+    
+    }
     
 
     
