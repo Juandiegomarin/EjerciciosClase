@@ -323,7 +323,7 @@ public class Main {
         hay = l.stream()
                 .allMatch(n -> n.getNombre().contains(nombre));
 
-        System.out.println("Hay algú/a"+nombre+" en la lista de empleados: " + hay);
+        System.out.println("Hay algú/a "+nombre+" en la lista de empleados: " + hay);
         
 
     }
